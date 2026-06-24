@@ -10,6 +10,7 @@ const serviceLinks = [
 
 const resourceLinks = [
   { name: 'Platform & CRM', href: '/platform' },
+  { name: 'ROI Calculator', href: '/calculator' },
   { name: 'Blog', href: '/blog' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Free Trial', href: '/free-trial' },

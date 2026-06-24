@@ -16,6 +16,7 @@ const services = [
 const navLinks = [
   { name: 'Services', href: '/services', hasDropdown: true },
   { name: 'Platform', href: '/platform' },
+  { name: 'ROI Calculator', href: '/calculator' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'About', href: '/about' },

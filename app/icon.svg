@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tint Marketing Pro">
+  <rect width="64" height="64" rx="14" fill="#0B0F1A"/>
+  <path d="M12 17h40v10H37v29H27V27H12V17z" fill="#FFFFFF"/>
+  <path d="M40 17h12L37 27H27l13-10z" fill="#1D4ED8"/>
+  <path d="M47 40c5-4 8-9 9-16 2 10-2 20-10 26-7 5-17 6-26 2 10 1 19-3 27-12z" fill="#3B82F6"/>
+</svg>

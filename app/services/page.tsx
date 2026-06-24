@@ -4,8 +4,25 @@ import { Search, MapPin, TrendingUp, Share2, ArrowRight } from 'lucide-react'
 import CTABanner from '@/components/CTABanner'
 
 export const metadata: Metadata = {
-  title: 'Marketing Services for Window Tint Shops',
-  description: 'Google Ads, Local SEO, Google Maps ranking, and social media marketing built exclusively for window tint shops. See what we offer.',
+  title: 'Window Tint Shop Marketing Services',
+  description: 'Google Ads, Local SEO, Google Maps ranking, and social media marketing built exclusively for window tint shops. Free trial available.',
+  keywords: [
+    'window tint marketing services',
+    'tint shop advertising',
+    'window tint Google Ads',
+    'tint shop SEO',
+    'window tint lead generation',
+    'tint business marketing',
+  ],
+  alternates: {
+    canonical: 'https://tintmarketingpros.online/services',
+  },
+  openGraph: {
+    title: 'Window Tint Shop Marketing Services',
+    description: 'Google Ads, Local SEO, Google Maps ranking, and social media marketing built exclusively for window tint shops.',
+    url: 'https://tintmarketingpros.online/services',
+    type: 'website',
+  },
 }
 
 const services = [
@@ -63,7 +80,7 @@ export default function ServicesPage() {
               <Link
                 key={service.title}
                 href={service.href}
-                className="group flex flex-col md:flex-row items-start gap-8 bg-surface2 border border-border rounded-2xl p-8 md:p-12 hover:border-accent/30 transition-all"
+                className="group flex flex-col md:flex-row items-start gap-8 bg-white border border-slate-200 rounded-2xl p-8 md:p-12 hover:border-accent/30 hover:shadow-md transition-all"
               >
                 <div className="flex-shrink-0">
                   <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">

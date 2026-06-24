@@ -7,7 +7,7 @@ import CaseStudyCard from '@/components/CaseStudyCard'
 import TestimonialCarousel from '@/components/TestimonialCarousel'
 import FAQAccordion from '@/components/FAQAccordion'
 import LeadForm from '@/components/LeadForm'
-import { OrganizationSchema, FAQSchema } from '@/components/SchemaMarkup'
+import { OrganizationSchema, FAQSchema, LocalBusinessSchema, AggregateRatingSchema } from '@/components/SchemaMarkup'
 import HeroSection from '@/components/HeroSection'
 import ServicesGrid from '@/components/ServicesGrid'
 import CRMShowcase from '@/components/CRMShowcase'
@@ -24,6 +24,8 @@ export default function HomePage() {
   return (
     <>
       <OrganizationSchema />
+      <LocalBusinessSchema />
+      <AggregateRatingSchema />
       <FAQSchema />
 
       <HeroSection />
@@ -56,7 +58,7 @@ export default function HomePage() {
                   alt="Tint shop owner excited about new lead notifications coming in on his phone"
                   width={600}
                   height={400}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>

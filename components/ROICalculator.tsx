@@ -26,7 +26,7 @@ export default function ROICalculator() {
           step={100}
           value={budget}
           onChange={(e) => setBudget(Number(e.target.value))}
-          className="w-full h-2 bg-surface2 rounded-lg appearance-none cursor-pointer accent-accent"
+          className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-accent"
         />
         <div className="flex justify-between text-xs text-muted mt-2">
           <span>$300</span>
@@ -35,20 +35,20 @@ export default function ROICalculator() {
       </div>
 
       <div className="grid grid-cols-2 gap-6">
-        <div className="bg-surface2 rounded-xl p-6 text-center">
+        <div className="bg-slate-100 rounded-xl p-6 text-center">
           <p className="font-display text-3xl font-bold text-text">{estimatedLeads}</p>
           <p className="text-muted text-xs uppercase tracking-wider mt-1">Estimated Leads</p>
         </div>
-        <div className="bg-surface2 rounded-xl p-6 text-center">
+        <div className="bg-slate-100 rounded-xl p-6 text-center">
           <p className="font-display text-3xl font-bold text-text">{estimatedJobs}</p>
           <p className="text-muted text-xs uppercase tracking-wider mt-1">Estimated Jobs</p>
         </div>
-        <div className="bg-surface2 rounded-xl p-6 text-center">
+        <div className="bg-slate-100 rounded-xl p-6 text-center">
           <p className="font-display text-3xl font-bold text-accent">${estimatedRevenue.toLocaleString()}</p>
           <p className="text-muted text-xs uppercase tracking-wider mt-1">Estimated Revenue</p>
         </div>
-        <div className="bg-surface2 rounded-xl p-6 text-center">
-          <p className="font-display text-3xl font-bold text-green-400">{roi}%</p>
+        <div className="bg-slate-100 rounded-xl p-6 text-center">
+          <p className="font-display text-3xl font-bold text-green-600">{roi}%</p>
           <p className="text-muted text-xs uppercase tracking-wider mt-1">Return on Ad Spend</p>
         </div>
       </div>

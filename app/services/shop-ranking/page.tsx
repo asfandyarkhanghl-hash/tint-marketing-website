@@ -3,8 +3,25 @@ import { CheckCircle2 } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 
 export const metadata: Metadata = {
-  title: 'Google Maps Ranking for Window Tint Shops — Dominate the Local Pack',
-  description: 'We get window tint shops ranked in Google\'s top 3 map results. 73% of local tint bookings come from Google Maps. Claim your spot.',
+  title: 'Google Maps Ranking for Tint Shops',
+  description: 'Get your tint shop ranked in Google\'s top 3 map results. 73% of local tint bookings come from Maps. Top 3 in 30-60 days.',
+  keywords: [
+    'Google Maps ranking tint shop',
+    'local SEO window tint',
+    'Google Business Profile tint',
+    'map pack ranking tint shop',
+    'local search tint business',
+    'Google Maps optimization tint',
+  ],
+  alternates: {
+    canonical: 'https://tintmarketingpros.online/services/shop-ranking',
+  },
+  openGraph: {
+    title: 'Google Maps Ranking for Tint Shops',
+    description: 'Get your tint shop into the Google Maps top 3. 73% of local tint bookings come from Maps. Results in 30-60 days.',
+    url: 'https://tintmarketingpros.online/services/shop-ranking',
+    type: 'website',
+  },
 }
 
 const optimizationSteps = [
@@ -56,7 +73,7 @@ export default function ShopRankingPage() {
               { stat: '4x', label: 'more calls for shops in the map pack' },
               { stat: '$0', label: 'cost per lead from organic Maps traffic' },
             ].map((item) => (
-              <div key={item.label} className="text-center bg-surface2 border border-border rounded-2xl p-8">
+              <div key={item.label} className="text-center bg-white border border-slate-200 rounded-2xl p-8">
                 <p className="font-display text-5xl font-bold text-accent">{item.stat}</p>
                 <p className="text-muted text-sm mt-2">{item.label}</p>
               </div>
@@ -84,14 +101,14 @@ export default function ShopRankingPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-surface2">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             What to Expect: <span className="accent-gradient">Week by Week</span>
           </h2>
           <div className="space-y-4">
             {timeline.map((t) => (
-              <div key={t.week} className="flex flex-col md:flex-row md:items-center gap-4 bg-surface border border-border rounded-xl p-6">
+              <div key={t.week} className="flex flex-col md:flex-row md:items-center gap-4 bg-white border border-slate-200 rounded-xl p-6">
                 <span className="text-accent font-bold text-sm uppercase tracking-wider w-28 flex-shrink-0">{t.week}</span>
                 <p className="text-muted text-sm">{t.description}</p>
               </div>

@@ -3,8 +3,24 @@ import { Shield, Eye, Target } from 'lucide-react'
 import CTABanner from '@/components/CTABanner'
 
 export const metadata: Metadata = {
-  title: 'About — We Only Work With Window Tint Shops',
-  description: 'Tint Marketing Pro was built to solve the unique marketing challenges of window tint shops. Learn our story, values, and why we only serve this niche.',
+  title: 'About Tint Marketing Pro',
+  description: 'We exclusively serve window tint shops with Google Ads, SEO, and Maps ranking. 63+ tint shops served. Learn our story and values.',
+  keywords: [
+    'about tint marketing pro',
+    'window tint marketing agency',
+    'tint shop marketing specialists',
+    'niche marketing agency tint',
+    'window tint advertising experts',
+  ],
+  alternates: {
+    canonical: 'https://tintmarketingpros.online/about',
+  },
+  openGraph: {
+    title: 'About Tint Marketing Pro',
+    description: 'We exclusively serve window tint shops with Google Ads, SEO, and Maps ranking. 63+ tint shops served nationwide.',
+    url: 'https://tintmarketingpros.online/about',
+    type: 'website',
+  },
 }
 
 const values = [
@@ -73,7 +89,7 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value) => (
-              <div key={value.title} className="bg-surface2 border border-border rounded-2xl p-8 text-center">
+              <div key={value.title} className="bg-white border border-slate-200 rounded-2xl p-8 text-center">
                 <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6">
                   <value.icon className="w-7 h-7 text-accent" />
                 </div>
@@ -101,12 +117,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-surface2">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
             Our <span className="accent-gradient">Results Guarantee</span>
           </h2>
-          <div className="bg-surface border-2 border-accent/30 rounded-2xl p-10 max-w-2xl mx-auto">
+          <div className="bg-white border-2 border-accent/30 rounded-2xl p-10 max-w-2xl mx-auto">
             <p className="text-text text-xl leading-relaxed">
               If you do not see a measurable increase in qualified leads within 30 days of working with us, you pay nothing. Zero. No fine print. No exceptions.
             </p>

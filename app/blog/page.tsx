@@ -37,7 +37,7 @@ export default function BlogPage() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   activeCategory === cat
                     ? 'bg-accent text-white'
-                    : 'bg-surface2 text-muted hover:text-text border border-border'
+                    : 'bg-white text-muted hover:text-text border border-slate-200'
                 }`}
               >
                 {cat}

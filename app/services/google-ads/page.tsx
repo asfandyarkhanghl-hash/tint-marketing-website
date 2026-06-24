@@ -5,14 +5,31 @@ import LeadForm from '@/components/LeadForm'
 import ROICalculator from '@/components/ROICalculator'
 
 export const metadata: Metadata = {
-  title: 'Google Ads for Window Tint Shops — Fill Your Schedule in 14 Days',
-  description: 'Precision Google Ads campaigns built exclusively for window tint shops. We target "ceramic tint near me" and convert clicks into booked jobs.',
+  title: 'Google Ads for Window Tint Shops',
+  description: 'Precision Google Ads campaigns for window tint shops. We target "ceramic tint near me" and convert clicks into booked jobs. $12 avg cost per lead.',
+  keywords: [
+    'window tint Google Ads',
+    'tint shop PPC',
+    'ceramic tint advertising',
+    'window tint pay per click',
+    'tint shop lead generation',
+    'Google Ads tint business',
+  ],
+  alternates: {
+    canonical: 'https://tintmarketingpros.online/services/google-ads',
+  },
+  openGraph: {
+    title: 'Google Ads for Window Tint Shops',
+    description: 'Precision Google Ads campaigns for window tint shops. Average $12 cost per lead. Fill your schedule in 14 days.',
+    url: 'https://tintmarketingpros.online/services/google-ads',
+    type: 'website',
+  },
 }
 
 const keywordTable = [
-  { intent: 'High buyer intent', keywords: '"ceramic tint near me", "window tint [city]", "car window tint cost"', color: 'text-green-400' },
-  { intent: 'Service specific', keywords: '"3M window tint", "llumar tint near me", "ceramic window film"', color: 'text-accent-light' },
-  { intent: 'Negative (we exclude)', keywords: '"window tint removal diy", "how to tint windows", "window tint law"', color: 'text-red-400' },
+  { intent: 'High buyer intent', keywords: '"ceramic tint near me", "window tint [city]", "car window tint cost"', color: 'text-green-600' },
+  { intent: 'Service specific', keywords: '"3M window tint", "llumar tint near me", "ceramic window film"', color: 'text-accent' },
+  { intent: 'Negative (we exclude)', keywords: '"window tint removal diy", "how to tint windows", "window tint law"', color: 'text-red' },
 ]
 
 const failures = [
@@ -50,7 +67,7 @@ export default function GoogleAdsPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {failures.map((f, i) => (
-              <div key={i} className="bg-surface2 border border-border rounded-2xl p-8">
+              <div key={i} className="bg-white border border-slate-200 rounded-2xl p-8">
                 <span className="text-accent font-display text-5xl font-bold opacity-20">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="font-display text-xl font-bold text-text mt-4 mb-3">{f.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{f.detail}</p>
@@ -86,7 +103,7 @@ export default function GoogleAdsPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-surface2">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
             Campaign Structure <span className="accent-gradient">Breakdown</span>
@@ -99,7 +116,7 @@ export default function GoogleAdsPage() {
               { name: 'Campaign 1: High-Intent Tint', groups: ['Ceramic tint keywords', 'General tint keywords', 'Brand-specific searches (3M, XPEL, Llumar)'] },
               { name: 'Campaign 2: Service-Specific', groups: ['Residential tint keywords', 'Commercial tint keywords', 'Vehicle-specific keywords'] },
             ].map((campaign) => (
-              <div key={campaign.name} className="bg-surface border border-border rounded-2xl p-8">
+              <div key={campaign.name} className="bg-white border border-slate-200 rounded-2xl p-8">
                 <h3 className="font-display text-lg font-bold text-accent mb-4">{campaign.name}</h3>
                 <ul className="space-y-3">
                   {campaign.groups.map((group) => (
@@ -135,7 +152,7 @@ export default function GoogleAdsPage() {
           <p className="text-muted text-center mb-10">
             Start your free 14-day Google Ads trial. We build and launch your campaign at zero cost.
           </p>
-          <div className="bg-surface2 border border-border rounded-2xl p-8">
+          <div className="bg-white border border-slate-200 rounded-2xl p-8">
             <LeadForm />
           </div>
         </div>

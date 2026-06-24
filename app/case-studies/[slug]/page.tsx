@@ -16,6 +16,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: cs.metaTitle,
     description: cs.metaDescription,
+    keywords: [
+      `${cs.shopName} case study`,
+      `window tint marketing ${cs.city}`,
+      `tint shop ${cs.niche.toLowerCase()}`,
+      'window tint marketing results',
+      'tint shop lead generation case study',
+    ],
+    alternates: {
+      canonical: `https://tintmarketingpros.online/case-studies/${slug}`,
+    },
+    openGraph: {
+      title: cs.metaTitle,
+      description: cs.metaDescription,
+      url: `https://tintmarketingpros.online/case-studies/${slug}`,
+      type: 'article',
+    },
   }
 }
 
@@ -44,7 +60,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {cs.results.map((r) => (
-              <div key={r.label} className="text-center bg-surface2 border border-border rounded-xl p-6">
+              <div key={r.label} className="text-center bg-white border border-slate-200 rounded-xl p-6">
                 <p className="font-display text-3xl font-bold text-accent">{r.metric}</p>
                 <p className="text-muted text-xs uppercase tracking-wider mt-1">{r.label}</p>
               </div>
@@ -65,7 +81,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <h2 className="font-display text-3xl font-bold mb-8">The Strategy</h2>
           <ul className="space-y-4">
             {cs.strategy.map((s, i) => (
-              <li key={i} className="flex items-start gap-4 bg-surface2 border border-border rounded-xl p-6">
+              <li key={i} className="flex items-start gap-4 bg-white border border-slate-200 rounded-xl p-6">
                 <span className="bg-accent text-white w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">{i + 1}</span>
                 <p className="text-muted text-sm leading-relaxed">{s}</p>
               </li>
@@ -88,7 +104,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         </div>
       </section>
 
-      <section className="py-16 bg-surface2">
+      <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <blockquote className="border-l-4 border-accent pl-8 py-4">
             <p className="text-text text-lg md:text-xl leading-relaxed italic mb-4">

@@ -17,6 +17,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.title,
     description: post.metaDescription,
     keywords: post.keywords,
+    alternates: {
+      canonical: `https://tintmarketingpros.online/blog/${slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.metaDescription,
+      url: `https://tintmarketingpros.online/blog/${slug}`,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.metaDescription,
+    },
   }
 }
 
@@ -137,7 +153,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <Link
                 key={rp.slug}
                 href={`/blog/${rp.slug}`}
-                className="group bg-surface2 border border-border rounded-xl p-6 hover:border-accent/30 transition-all"
+                className="group bg-white border border-slate-200 rounded-xl p-6 hover:border-accent/30 transition-all"
               >
                 <span className="text-accent text-xs font-semibold">{rp.category}</span>
                 <h3 className="font-bold text-text mt-2 mb-2 group-hover:text-accent transition-colors text-sm">

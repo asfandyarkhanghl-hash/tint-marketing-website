@@ -3,10 +3,13 @@ export function OrganizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'MarketingAgency',
     name: 'Tint Marketing Pro',
-    url: 'https://tintmarketingpros.com',
+    url: 'https://tintmarketingpros.online',
     description:
       'Marketing agency exclusively serving window tint shops. Google Ads, Local SEO, and Google Maps ranking for tint businesses.',
-    areaServed: 'United States',
+    areaServed: {
+      '@type': 'Country',
+      name: 'United States',
+    },
     serviceType: [
       'Google Ads',
       'Search Engine Optimization',
@@ -18,6 +21,186 @@ export function OrganizationSchema() {
       'Ceramic Tint',
       'Auto Tint',
       'Residential Window Tinting',
+    ],
+    sameAs: [
+      'https://tintmarketingpros.online',
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+export function LocalBusinessSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': 'https://tintmarketingpros.online/#business',
+    name: 'Tint Marketing Pro',
+    url: 'https://tintmarketingpros.online',
+    description:
+      'Marketing agency exclusively serving window tint shops across the United States. Specializing in Google Ads, Local SEO, Google Maps ranking, and social media marketing for tint businesses.',
+    areaServed: {
+      '@type': 'Country',
+      name: 'United States',
+    },
+    priceRange: '$$',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '63',
+      bestRating: '5',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Window Tint Shop Marketing Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Google Ads for Tint Shops',
+            url: 'https://tintmarketingpros.online/services/google-ads',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Window Tint SEO',
+            url: 'https://tintmarketingpros.online/services/seo',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Google Maps Ranking',
+            url: 'https://tintmarketingpros.online/services/shop-ranking',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Social Media & Retargeting',
+            url: 'https://tintmarketingpros.online/services/social-media',
+          },
+        },
+      ],
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+export function ServiceSchema({
+  name,
+  description,
+  url,
+}: {
+  name: string
+  description: string
+  url: string
+}) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    url,
+    provider: {
+      '@type': 'ProfessionalService',
+      name: 'Tint Marketing Pro',
+      url: 'https://tintmarketingpros.online',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'United States',
+    },
+    serviceType: 'Digital Marketing',
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Window Tint Shop Owners',
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+export function BreadcrumbSchema({
+  items,
+}: {
+  items: { name: string; url: string }[]
+}) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+export function AggregateRatingSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Tint Marketing Pro',
+    url: 'https://tintmarketingpros.online',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '63',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Marcus T.' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody:
+          'I spent 6 years building this business on referrals alone. In 60 days with Tint Marketing Pro, I generated more leads than I got in the entire previous year.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Sandra R.' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody:
+          'They cut my spend in half and tripled my leads. Now I can see every single lead source in a dashboard.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'James K.' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody:
+          'I went from 5 calls a week to 30+ calls a week. Tint Marketing Pro got me into the top 3 in 47 days.',
+      },
     ],
   }
 
@@ -119,7 +302,7 @@ export function ArticleSchema({
       '@type': 'Organization',
       name: 'Tint Marketing Pro',
     },
-    url: `https://tintmarketingpros.com/blog/${slug}`,
+    url: `https://tintmarketingpros.online/blog/${slug}`,
     datePublished,
     dateModified: dateModified || datePublished,
   }

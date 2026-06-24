@@ -6,7 +6,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group bg-surface border border-border rounded-2xl p-8 hover:border-accent/30 transition-all block"
+      className="group bg-white border border-slate-200 rounded-2xl p-8 hover:border-accent/30 hover:shadow-md transition-all block"
     >
       <div className="flex items-center gap-3 mb-4">
         <span className="bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full">

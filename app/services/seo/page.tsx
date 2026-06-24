@@ -3,8 +3,25 @@ import { CheckCircle2 } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 
 export const metadata: Metadata = {
-  title: 'Window Tint SEO — Rank on Google Without Paying Per Click',
-  description: 'Long-term SEO for window tint shops. We rank your website for "window tint [city]" and high-intent local searches that drive free bookings.',
+  title: 'SEO for Window Tint Shops',
+  description: 'Long-term SEO for window tint shops. We rank your site for "window tint [city]" and high-intent searches. Page 1 rankings in 60 days.',
+  keywords: [
+    'window tint SEO',
+    'tint shop search engine optimization',
+    'window tinting website ranking',
+    'local SEO tint business',
+    'tint shop organic traffic',
+    'window tint content marketing',
+  ],
+  alternates: {
+    canonical: 'https://tintmarketingpros.online/services/seo',
+  },
+  openGraph: {
+    title: 'SEO for Window Tint Shops',
+    description: 'Long-term SEO for window tint shops. Page 1 rankings in 60 days. Content, backlinks, and technical SEO that compound.',
+    url: 'https://tintmarketingpros.online/services/seo',
+    type: 'website',
+  },
 }
 
 const pillars = [
@@ -54,12 +71,12 @@ export default function SEOPage() {
               { label: 'Generic Agency Targets', items: ['window tint', 'window film', 'car tinting'], bad: true },
               { label: 'What We Target', items: ['ceramic tint Dallas TX', 'auto tint shop near Plano', 'best window tint installer DFW'], bad: false },
             ].map((col) => (
-              <div key={col.label} className={`rounded-2xl p-8 border ${col.bad ? 'bg-red-950/20 border-red-900/30' : 'bg-accent/5 border-accent/20'}`}>
-                <h3 className={`font-bold mb-4 ${col.bad ? 'text-red-400' : 'text-accent'}`}>{col.label}</h3>
+              <div key={col.label} className={`rounded-2xl p-8 border ${col.bad ? 'bg-red-50 border-red-200' : 'bg-accent/5 border-accent/20'}`}>
+                <h3 className={`font-bold mb-4 ${col.bad ? 'text-red' : 'text-accent'}`}>{col.label}</h3>
                 <ul className="space-y-2">
                   {col.items.map((item) => (
                     <li key={item} className="text-muted text-sm flex items-center gap-2">
-                      <span className={`w-1.5 h-1.5 rounded-full ${col.bad ? 'bg-red-400' : 'bg-accent'}`} />
+                      <span className={`w-1.5 h-1.5 rounded-full ${col.bad ? 'bg-red' : 'bg-accent'}`} />
                       {item}
                     </li>
                   ))}
@@ -100,7 +117,7 @@ export default function SEOPage() {
           </h2>
           <div className="space-y-4">
             {calendar.map((c) => (
-              <div key={c.month} className="bg-surface2 border border-border rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4">
+              <div key={c.month} className="bg-white border border-slate-200 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4">
                 <span className="text-accent font-bold text-sm uppercase tracking-wider w-24 flex-shrink-0">{c.month}</span>
                 <p className="text-muted text-sm">{c.content}</p>
               </div>

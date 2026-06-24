@@ -3,8 +3,25 @@ import { CheckCircle2 } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 
 export const metadata: Metadata = {
-  title: 'Social Media & Retargeting for Tint Shops — Turn Scrollers Into Bookings',
-  description: 'Meta Ads and social media marketing designed for window tint shops. Before/after content, retargeting, and converting Instagram browsers into bookings.',
+  title: 'Social Media Marketing for Tint Shops',
+  description: 'Meta Ads and social media marketing for window tint shops. Before/after content, retargeting, and 3x ROAS average. Turn scrollers into bookings.',
+  keywords: [
+    'tint shop social media marketing',
+    'window tint Facebook Ads',
+    'tint shop Instagram marketing',
+    'window tint Meta Ads',
+    'tint shop retargeting',
+    'social media tint business',
+  ],
+  alternates: {
+    canonical: 'https://tintmarketingpros.online/services/social-media',
+  },
+  openGraph: {
+    title: 'Social Media Marketing for Tint Shops',
+    description: 'Meta Ads and social media marketing for window tint shops. Before/after content, retargeting, and 3x ROAS average.',
+    url: 'https://tintmarketingpros.online/services/social-media',
+    type: 'website',
+  },
 }
 
 export default function SocialMediaPage() {
@@ -35,7 +52,7 @@ export default function SocialMediaPage() {
               { title: 'Local Targeting', detail: 'Meta Ads let us target homeowners and car enthusiasts within a 15-mile radius of your shop. No wasted impressions on people outside your service area.' },
               { title: 'Retargeting Power', detail: '97% of website visitors leave without booking. Retargeting ads follow them on Instagram and Facebook, keeping your shop top-of-mind until they are ready.' },
             ].map((item) => (
-              <div key={item.title} className="bg-surface2 border border-border rounded-2xl p-8">
+              <div key={item.title} className="bg-white border border-slate-200 rounded-2xl p-8">
                 <h3 className="font-display text-xl font-bold text-text mb-3">{item.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{item.detail}</p>
               </div>
@@ -78,7 +95,7 @@ export default function SocialMediaPage() {
             Get More <span className="accent-gradient">Eyes on Your Work</span>
           </h2>
           <p className="text-muted text-center mb-10">Start your free trial and we will set up your retargeting pixel and first ad campaign.</p>
-          <div className="bg-surface2 border border-border rounded-2xl p-8">
+          <div className="bg-white border border-slate-200 rounded-2xl p-8">
             <LeadForm />
           </div>
         </div>

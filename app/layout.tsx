@@ -19,6 +19,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tintmarketingpros.online"),
   title: {
     default: "Tint Marketing Pro | Window Tint Shop Marketing Agency",
     template: "%s | Tint Marketing Pro",
@@ -37,15 +38,34 @@ export const metadata: Metadata = {
     "window tinting business growth",
     "tint shop local SEO",
   ],
+  alternates: {
+    canonical: "https://tintmarketingpros.online",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tintmarketingpros.com",
+    url: "https://tintmarketingpros.online",
     siteName: "Tint Marketing Pro",
+    title: "Tint Marketing Pro | Window Tint Shop Marketing Agency",
+    description:
+      "We help window tint shops get more bookings with Google Ads, Local SEO, and Google Maps ranking. Specialized marketing exclusively for tint shops.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tint Marketing Pro | Window Tint Shop Marketing Agency",
+    description:
+      "We help window tint shops get more bookings with Google Ads, Local SEO, and Google Maps ranking. Free trial available.",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   verification: {
     google: "sF5M4oI2-F0cLzNObw5goIyGfqFHR4UPvVMsObIiOAo",

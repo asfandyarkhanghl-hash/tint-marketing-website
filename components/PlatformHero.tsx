@@ -6,11 +6,10 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
 export default function PlatformHero() {
   return (
-    <section className="pt-32 pb-20 relative overflow-hidden">
-      <div className="absolute inset-0 gradient-bg" />
+    <section className="pt-32 pb-20 relative overflow-hidden bg-white">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/[0.04] rounded-full blur-3xl" />
-      <div className="absolute inset-0 opacity-[0.015]" style={{
-        backgroundImage: 'linear-gradient(rgba(37,99,235,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.3) 1px, transparent 1px)',
+      <div className="absolute inset-0 opacity-[0.02]" style={{
+        backgroundImage: 'linear-gradient(rgba(37,99,235,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.2) 1px, transparent 1px)',
         backgroundSize: '60px 60px',
       }} />
 
@@ -75,40 +74,40 @@ export default function PlatformHero() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mt-16 max-w-5xl mx-auto"
         >
-          <div className="glow-border rounded-2xl overflow-hidden bg-surface p-1">
-            <div className="bg-[#0B0B1E] rounded-xl overflow-hidden">
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
+          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-2xl shadow-slate-200/60 bg-white p-1">
+            <div className="bg-white rounded-xl overflow-hidden">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-slate-200">
                 <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500/60" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-                  <div className="w-3 h-3 rounded-full bg-green-500/60" />
+                  <div className="w-3 h-3 rounded-full bg-red-400" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                  <div className="w-3 h-3 rounded-full bg-green-400" />
                 </div>
                 <div className="flex-1 mx-4">
-                  <div className="bg-surface2 rounded-md px-3 py-1 text-xs text-muted/50 text-center max-w-xs mx-auto">
+                  <div className="bg-slate-100 rounded-md px-3 py-1 text-xs text-muted text-center max-w-xs mx-auto">
                     app.tintmarketingpro.com/dashboard
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 md:p-8">
+              <div className="p-6 md:p-8 bg-slate-50">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                   {[
                     { label: 'New Leads Today', value: '14', change: '+23%', color: 'text-accent' },
-                    { label: 'Appointments', value: '8', change: '+12%', color: 'text-green-400' },
+                    { label: 'Appointments', value: '8', change: '+12%', color: 'text-green-600' },
                     { label: 'Revenue (MTD)', value: '$47,200', change: '+31%', color: 'text-accent' },
-                    { label: 'Review Rating', value: '4.9★', change: '+0.2', color: 'text-yellow-400' },
+                    { label: 'Review Rating', value: '4.9★', change: '+0.2', color: 'text-yellow-600' },
                   ].map((stat) => (
-                    <div key={stat.label} className="bg-surface2/50 border border-border rounded-xl p-4">
+                    <div key={stat.label} className="bg-white border border-slate-200 rounded-xl p-4">
                       <p className="text-muted text-[10px] uppercase tracking-wider">{stat.label}</p>
                       <p className={`text-2xl font-bold mt-1 ${stat.color}`}>{stat.value}</p>
-                      <p className="text-green-400 text-[10px] mt-1">{stat.change} ↑</p>
+                      <p className="text-green-600 text-[10px] mt-1">{stat.change} ↑</p>
                     </div>
                   ))}
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {/* Pipeline mini */}
-                  <div className="bg-surface2/30 border border-border rounded-xl p-4 md:col-span-2">
+                  <div className="bg-white border border-slate-200 rounded-xl p-4 md:col-span-2">
                     <p className="text-muted text-[10px] uppercase tracking-wider mb-3">Pipeline — This Week</p>
                     <div className="flex gap-2">
                       {[
@@ -128,7 +127,7 @@ export default function PlatformHero() {
                   </div>
 
                   {/* Recent activity */}
-                  <div className="bg-surface2/30 border border-border rounded-xl p-4">
+                  <div className="bg-white border border-slate-200 rounded-xl p-4">
                     <p className="text-muted text-[10px] uppercase tracking-wider mb-3">Live Activity</p>
                     <div className="space-y-2">
                       {[

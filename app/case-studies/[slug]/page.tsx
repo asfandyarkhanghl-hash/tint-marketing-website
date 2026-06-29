@@ -31,6 +31,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: cs.metaDescription,
       url: `https://tintmarketingpros.online/case-studies/${slug}`,
       type: 'article',
+      images: [
+        {
+          url: 'https://tintmarketingpros.online/images/optimized/stats-dashboard.jpg',
+          width: 1100,
+          height: 733,
+          alt: `${cs.shopName} marketing results dashboard`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: cs.metaTitle,
+      description: cs.metaDescription,
+      images: ['https://tintmarketingpros.online/images/optimized/stats-dashboard.jpg'],
     },
   }
 }
@@ -89,6 +103,22 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </ul>
         </div>
       </section>
+
+      {cs.benefits && (
+        <section className="py-16 bg-primary">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Benefits Beyond the Metrics</p>
+            <h2 className="font-display text-3xl font-bold mb-8">What Crystal Clear Gained After the Waste Was Removed</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {cs.benefits.map((benefit) => (
+                <div key={benefit} className="bg-surface border border-border rounded-xl p-6">
+                  <p className="text-muted text-sm leading-relaxed">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -36,7 +36,7 @@ export default function FreeTrialPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center mb-8">
             <Link href="/">
-              <Image src="/images/logo.png" alt="Tint Marketing Pro" width={180} height={50} className="h-10 w-auto" />
+              <Image src="/images/optimized/logo.png" alt="Tint Marketing Pro" width={180} height={50} className="h-10 w-auto" />
             </Link>
           </div>
 

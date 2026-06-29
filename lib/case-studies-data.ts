@@ -7,6 +7,7 @@ export interface CaseStudy {
   problem: string
   problemDetail: string
   strategy: string[]
+  benefits?: string[]
   results: { metric: string; label: string }[]
   timeline: { month: string; description: string }[]
   quote: string
@@ -83,6 +84,12 @@ export const caseStudies: CaseStudy[] = [
       'Reduced monthly ad spend from $2,000 to $900 while tripling conversion volume',
       'Implemented call tracking and form tracking so every lead source was visible in a live dashboard',
       'Ran a 90-day Google Maps optimization campaign — photos, Q&A, citation cleanup, and review velocity push',
+    ],
+    benefits: [
+      'Every call, form, and booked job became visible in one dashboard, so Sandra could finally see which campaigns produced real revenue.',
+      'The team stopped wasting time on poor-fit searches and started prioritizing ceramic and residential tint leads with higher average tickets.',
+      'Lower ad spend freed up budget for Google Maps optimization, review growth, and better follow-up automation.',
+      'The shop gained a repeatable lead system instead of relying on PDF reports, guesswork, or generic agency recommendations.',
     ],
     results: [
       { metric: '3x', label: 'Lead volume increase' },

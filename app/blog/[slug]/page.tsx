@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, Clock, User } from 'lucide-react'
@@ -13,6 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = blogPosts.find((p) => p.slug === slug)
   if (!post) return {}
+  const imageUrl = `https://tintmarketingpros.online${post.featuredImage.src}`
   return {
     title: post.title,
     description: post.metaDescription,
@@ -26,12 +28,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `https://tintmarketingpros.online/blog/${slug}`,
       type: 'article',
       publishedTime: post.date,
+      modifiedTime: post.dateModified,
       authors: [post.author],
+      images: [
+        {
+          url: imageUrl,
+          width: post.featuredImage.width,
+          height: post.featuredImage.height,
+          alt: post.featuredImage.alt,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.metaDescription,
+      images: [imageUrl],
     },
   }
 }
@@ -42,6 +54,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound()
 
   const relatedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3)
+  const renderInlineImages = (heading: string) =>
+    post.inlineImages
+      ?.filter((image) => image.afterHeading === heading)
+      .map((image) => (
+        <figure key={image.src} className="my-8 overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            className="h-auto w-full object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+          />
+          {image.caption && (
+            <figcaption className="px-5 py-3 text-sm text-muted">{image.caption}</figcaption>
+          )}
+        </figure>
+      )) ?? null
 
   return (
     <>
@@ -50,6 +80,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         description={post.metaDescription}
         slug={post.slug}
         datePublished={post.date}
+        dateModified={post.dateModified}
+        image={{
+          url: `https://tintmarketingpros.online${post.featuredImage.src}`,
+          width: post.featuredImage.width,
+          height: post.featuredImage.height,
+          alt: post.featuredImage.alt,
+        }}
       />
 
       <article className="pt-32 pb-20">
@@ -72,7 +109,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {post.title}
           </h1>
 
-          <div className="flex items-center gap-4 text-sm text-muted mb-12 pb-8 border-b border-border">
+          <div className="flex items-center gap-4 text-sm text-muted mb-8 pb-8 border-b border-border">
             <span className="flex items-center gap-1.5">
               <User className="w-4 h-4" />
               {post.author}
@@ -86,13 +123,40 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </span>
           </div>
 
+          <figure className="mb-12 overflow-hidden rounded-3xl border border-border bg-white shadow-sm">
+            <Image
+              src={post.featuredImage.src}
+              alt={post.featuredImage.alt}
+              width={post.featuredImage.width}
+              height={post.featuredImage.height}
+              priority
+              className="h-auto w-full object-cover"
+              sizes="(min-width: 768px) 768px, 100vw"
+            />
+            {post.featuredImage.caption && (
+              <figcaption className="px-5 py-3 text-sm text-muted">{post.featuredImage.caption}</figcaption>
+            )}
+          </figure>
+
           <div className="prose-custom">
             {post.content.split('\n\n').map((block, i) => {
               if (block.startsWith('## ')) {
-                return <h2 key={i} className="font-display text-2xl md:text-3xl font-bold text-text mt-12 mb-6">{block.replace('## ', '')}</h2>
+                const heading = block.replace('## ', '')
+                return (
+                  <div key={i}>
+                    <h2 className="font-display text-2xl md:text-3xl font-bold text-text mt-12 mb-6">{heading}</h2>
+                    {renderInlineImages(heading)}
+                  </div>
+                )
               }
               if (block.startsWith('### ')) {
-                return <h3 key={i} className="font-display text-xl font-bold text-text mt-8 mb-4">{block.replace('### ', '')}</h3>
+                const heading = block.replace('### ', '')
+                return (
+                  <div key={i}>
+                    <h3 className="font-display text-xl font-bold text-text mt-8 mb-4">{heading}</h3>
+                    {renderInlineImages(heading)}
+                  </div>
+                )
               }
               if (block.startsWith('> ')) {
                 return (

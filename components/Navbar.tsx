@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-18">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/images/logo.png"
+              src="/images/optimized/logo.png"
               alt="Tint Marketing Pro"
               width={180}
               height={50}

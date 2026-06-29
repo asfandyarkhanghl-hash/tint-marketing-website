@@ -104,7 +104,7 @@ export default function HeroSection() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/60">
               <Image
-                src="/images/hero-leads.png"
+                src="/images/optimized/hero-leads.jpg"
                 alt="Tint shop owner receiving new leads on phone with lead notifications and growth chart showing 127 new leads this month"
                 width={700}
                 height={500}

@@ -37,6 +37,14 @@ export const metadata: Metadata = {
     "window tint digital marketing",
     "window tinting business growth",
     "tint shop local SEO",
+    "window tint lead generation",
+    "tint shop PPC management",
+    "Google Maps ranking for tint shops",
+    "window tint shop CRM automation",
+    "residential window tint marketing",
+    "Tesla window tint marketing",
+    "ceramic tint leads",
+    "window tint shop SEO agency",
   ],
   alternates: {
     canonical: "https://tintmarketingpros.online",
@@ -56,12 +64,21 @@ export const metadata: Metadata = {
     title: "Tint Marketing Pro | Window Tint Shop Marketing Agency",
     description:
       "We help window tint shops get more bookings with Google Ads, Local SEO, and Google Maps ranking. Specialized marketing exclusively for tint shops.",
+    images: [
+      {
+        url: "/images/optimized/hero-leads.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Window tint shop lead dashboard and marketing pipeline",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tint Marketing Pro | Window Tint Shop Marketing Agency",
     description:
       "We help window tint shops get more bookings with Google Ads, Local SEO, and Google Maps ranking. Free trial available.",
+    images: ["/images/optimized/hero-leads.jpg"],
   },
   robots: {
     index: true,

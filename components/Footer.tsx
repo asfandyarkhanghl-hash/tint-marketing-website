@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
-            <Image src="/images/logo.png" alt="Tint Marketing Pro" width={160} height={45} className="h-9 w-auto mb-4 brightness-0 invert" />
+            <Image src="/images/optimized/logo.png" alt="Tint Marketing Pro" width={160} height={45} className="h-9 w-auto mb-4 brightness-0 invert" />
             <p className="text-slate-400 text-sm leading-relaxed">
               The only marketing agency built exclusively for window tint shops.
               More leads. More appointments. More growth.

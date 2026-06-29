@@ -54,7 +54,7 @@ export default function HomePage() {
               </div>
               <div className="relative hidden lg:block">
                 <Image
-                  src="/images/owner-leads.png"
+                  src="/images/optimized/owner-leads.jpg"
                   alt="Tint shop owner excited about new lead notifications coming in on his phone"
                   width={600}
                   height={400}
@@ -129,7 +129,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/60 border border-slate-200">
                 <Image
-                  src="/images/owner-dashboard.png"
+                  src="/images/optimized/owner-dashboard.jpg"
                   alt="Tint shop owner viewing CRM dashboard showing 127 total leads, 63 appointments, $24,680 revenue, and 89 calls with lead tracking charts"
                   width={700}
                   height={500}
@@ -148,7 +148,7 @@ export default function HomePage() {
             <div className="order-2 lg:order-1">
               <div className="rounded-2xl overflow-hidden shadow-xl shadow-slate-200/60 border border-slate-200">
                 <Image
-                  src="/images/call-report.png"
+                  src="/images/optimized/call-report.jpg"
                   alt="Call reporting dashboard showing 42 total calls with 95.24% answered rate and average call duration of 2 minutes 22 seconds"
                   width={600}
                   height={450}
@@ -221,7 +221,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <div className="rounded-2xl overflow-hidden shadow-xl shadow-slate-200/60 border border-slate-200">
                 <Image
-                  src="/images/shop-interior.png"
+                  src="/images/optimized/shop-interior.jpg"
                   alt="Busy tint shop interior with multiple vehicles being tinted including Tesla and Porsche"
                   width={700}
                   height={470}
@@ -230,7 +230,7 @@ export default function HomePage() {
               </div>
               <div className="rounded-2xl overflow-hidden shadow-lg shadow-slate-200/40 border border-slate-200">
                 <Image
-                  src="/images/shop-floor.png"
+                  src="/images/optimized/shop-floor.jpg"
                   alt="Professional window tint shop floor with BMW, Tesla, and SUV lined up for tinting"
                   width={700}
                   height={350}
@@ -256,7 +256,7 @@ export default function HomePage() {
           </p>
           <div className="rounded-2xl overflow-hidden shadow-2xl shadow-slate-300/50 border border-slate-200 max-w-3xl mx-auto">
             <Image
-              src="/images/stats-dashboard.png"
+              src="/images/optimized/stats-dashboard.jpg"
               alt="Marketing dashboard showing 847 leads, 236 appointments, $128,420 revenue with growth charts and channel breakdown for a tint shop"
               width={900}
               height={550}

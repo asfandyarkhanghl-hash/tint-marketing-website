@@ -1,3 +1,12 @@
+export interface BlogImage {
+  src: string
+  alt: string
+  width: number
+  height: number
+  caption?: string
+  afterHeading?: string
+}
+
 export interface BlogPost {
   slug: string
   title: string
@@ -5,13 +14,163 @@ export interface BlogPost {
   category: string
   author: string
   date: string
+  dateModified?: string
   readTime: string
   keywords: string[]
   metaDescription: string
+  featuredImage: BlogImage
+  inlineImages?: BlogImage[]
   content: string
 }
 
-export const blogPosts: BlogPost[] = [
+type RawBlogPost = Omit<BlogPost, 'featuredImage' | 'inlineImages'>
+
+const blogImages: Record<string, Pick<BlogPost, 'featuredImage' | 'inlineImages'>> = {
+  'ceramic-tint-vs-carbon-tint-marketing': {
+    featuredImage: {
+      src: '/images/blog/ceramic-vs-carbon-google-ads.jpg',
+      alt: 'Tint shop owner comparing ceramic and carbon window tint film beside a vehicle',
+      width: 1200,
+      height: 620,
+      caption: 'Ceramic and carbon tint buyers respond to different offers, pricing, and proof points.',
+    },
+    inlineImages: [
+      {
+        src: '/images/blog/ceramic-upgrade-consultation-inline.jpg',
+        alt: 'Tint shop owner explaining premium ceramic tint benefits with film samples and a customer',
+        width: 940,
+        height: 626,
+        caption: 'Premium film sales work best when customers can see and feel the difference.',
+        afterHeading: 'Marketing Ceramic Tint: Lead With Benefits, Not Price',
+      },
+    ],
+  },
+  'window-tint-shop-google-maps-ranking': {
+    featuredImage: {
+      src: '/images/blog/google-maps-ranking.jpg',
+      alt: 'Window tint shop owner reviewing local ranking visibility on a tablet outside the shop',
+      width: 1040,
+      height: 520,
+    },
+    inlineImages: [
+      {
+        src: '/images/blog/gbp-photo-update-inline.jpg',
+        alt: 'Tint technician photographing a finished tinted vehicle for a Google Business Profile update',
+        width: 1020,
+        height: 680,
+        caption: 'Fresh work photos help local searchers trust your shop before they call.',
+        afterHeading: 'Step 2: Upload 50+ High-Quality Photos',
+      },
+    ],
+  },
+  'google-ads-for-window-tint-shops': {
+    featuredImage: {
+      src: '/images/blog/google-ads-window-tint-shops.jpg',
+      alt: 'Digital marketer and tint shop owner reviewing paid ad performance in a shop office',
+      width: 1320,
+      height: 704,
+    },
+  },
+  'window-tint-shop-marketing-plan': {
+    featuredImage: {
+      src: '/images/blog/tint-shop-marketing-plan.jpg',
+      alt: 'Window tint shop owner planning a year of marketing campaigns with a laptop and calendar',
+      width: 960,
+      height: 640,
+    },
+  },
+  'window-tint-keywords-seo': {
+    featuredImage: {
+      src: '/images/blog/window-tint-seo-keywords.jpg',
+      alt: 'SEO specialist and tint shop owner researching window tint keywords on a laptop',
+      width: 1180,
+      height: 647,
+    },
+  },
+  'tint-shop-lead-follow-up': {
+    featuredImage: {
+      src: '/images/blog/tint-shop-lead-follow-up.jpg',
+      alt: 'Tint shop owner responding quickly to a new customer lead on a smartphone',
+      width: 1080,
+      height: 720,
+    },
+    inlineImages: [
+      {
+        src: '/images/blog/lead-source-dashboard-inline.jpg',
+        alt: 'Tint shop owner reviewing lead sources and booked jobs on a dashboard tablet',
+        width: 980,
+        height: 653,
+        caption: 'A visible lead source dashboard makes follow-up speed and ROI easier to manage.',
+        afterHeading: 'The ROI of Speed',
+      },
+    ],
+  },
+  'residential-window-tint-marketing': {
+    featuredImage: {
+      src: '/images/blog/residential-window-tint-marketing.jpg',
+      alt: 'Residential window film consultant showing a homeowner how tint reduces glare and heat',
+      width: 1280,
+      height: 853,
+    },
+  },
+  'window-tint-shop-reviews': {
+    featuredImage: {
+      src: '/images/blog/google-reviews-window-tint-shop.jpg',
+      alt: 'Tint shop owner asking a happy customer for a review beside a freshly tinted car',
+      width: 1000,
+      height: 666,
+    },
+  },
+  'tesla-window-tint-marketing': {
+    featuredImage: {
+      src: '/images/blog/tesla-window-tint-marketing.jpg',
+      alt: 'Technician applying ceramic tint to a premium electric vehicle glass roof',
+      width: 1360,
+      height: 906,
+    },
+  },
+  'tint-shop-crm-automation-guide': {
+    featuredImage: {
+      src: '/images/blog/tint-shop-crm-automation.jpg',
+      alt: 'Tint shop manager using a CRM pipeline dashboard on a tablet at the front counter',
+      width: 1120,
+      height: 591,
+    },
+  },
+  'window-tint-facebook-ads-strategy': {
+    featuredImage: {
+      src: '/images/blog/facebook-instagram-ads-tint.jpg',
+      alt: 'Shop owner filming before and after window tint content for social media ads',
+      width: 1240,
+      height: 708,
+    },
+  },
+  'window-tint-pricing-strategy': {
+    featuredImage: {
+      src: '/images/blog/pricing-strategy-window-tint.jpg',
+      alt: 'Tint shop owner explaining premium pricing options with film samples to a customer',
+      width: 1060,
+      height: 706,
+    },
+  },
+}
+
+const extraKeywords: Record<string, string[]> = {
+  'ceramic-tint-vs-carbon-tint-marketing': ['ceramic tint leads', 'carbon tint advertising', 'premium tint sales'],
+  'window-tint-shop-google-maps-ranking': ['Google Business Profile tint shop', 'window tint near me ranking', 'local map pack tint shop'],
+  'google-ads-for-window-tint-shops': ['Google Ads agency for tint shops', 'window tint leads', 'ceramic tint PPC'],
+  'window-tint-shop-marketing-plan': ['2026 tint shop marketing plan', 'auto tint marketing calendar', 'tint shop growth strategy'],
+  'window-tint-keywords-seo': ['window tint SEO strategy', 'local SEO keywords for tint shops', 'ceramic tint keyword research'],
+  'tint-shop-lead-follow-up': ['speed to lead tint shop', 'missed call text back tint shop', 'tint lead automation'],
+  'residential-window-tint-marketing': ['home window film marketing', 'residential tint leads', 'energy saving window film advertising'],
+  'window-tint-shop-reviews': ['Google review strategy tint shop', 'tint shop reputation management', 'local SEO reviews'],
+  'tesla-window-tint-marketing': ['EV tint marketing', 'Tesla ceramic tint leads', 'premium vehicle tint advertising'],
+  'tint-shop-crm-automation-guide': ['tint shop CRM automation', 'window tint booking automation', 'lead management for tint shops'],
+  'window-tint-facebook-ads-strategy': ['Meta Ads tint shop', 'Instagram ads window tinting', 'before after tint ad creative'],
+  'window-tint-pricing-strategy': ['window tint pricing strategy', 'ceramic tint pricing', 'premium tint packages'],
+}
+
+const rawBlogPosts: RawBlogPost[] = [
   {
     slug: 'ceramic-tint-vs-carbon-tint-marketing',
     title: 'Ceramic Tint vs Carbon Tint: What Window Tint Shop Owners Should Know About Marketing Each Product',
@@ -79,14 +238,14 @@ Stop marketing all your tint products the same way. Ceramic and carbon tint attr
   },
   {
     slug: 'window-tint-shop-google-maps-ranking',
-    title: 'How to Rank Your Window Tint Shop in Google Maps (2025 Complete Guide)',
+    title: 'How to Rank Your Window Tint Shop in Google Maps (2026 Complete Guide)',
     excerpt: 'Step-by-step guide to getting your tint shop into the Google Maps top 3 pack. Covers GBP optimization, reviews, citations, and more.',
     category: 'Local Ranking',
     author: 'Tint Marketing Pro Team',
     date: '2025-02-10',
     readTime: '12 min read',
     keywords: ['window tint shop google maps', 'tint shop local SEO', 'google maps ranking tint'],
-    metaDescription: 'Complete 2025 guide to ranking your window tint shop in Google Maps top 3. GBP optimization, reviews, citations, and a 90-day ranking timeline.',
+    metaDescription: 'Complete 2026 guide to ranking your window tint shop in Google Maps top 3. GBP optimization, reviews, citations, and a 90-day ranking timeline.',
     content: `73% of people who search for "window tint near me" click on one of the top 3 Google Maps results. If your tint shop is not in that top 3, you are invisible to nearly three-quarters of your potential customers.
 
 The good news: Google Maps ranking is not a mystery. It follows a clear set of factors that you can systematically optimize. This guide walks you through every step.
@@ -313,14 +472,14 @@ By day 30, your campaign should be producing leads at $10–$15 each. If it is n
   },
   {
     slug: 'window-tint-shop-marketing-plan',
-    title: 'The Complete Window Tint Shop Marketing Plan for 2025 (Free Template)',
+    title: 'The Complete Window Tint Shop Marketing Plan for 2026 (Free Template)',
     excerpt: 'A 12-month marketing plan built specifically for window tint shops — seasonal strategy, budget allocation, and month-by-month action items.',
     category: 'Business Tips',
     author: 'Tint Marketing Pro Team',
     date: '2025-01-28',
     readTime: '11 min read',
     keywords: ['window tint shop marketing plan', 'tint business marketing strategy', 'window tinting business growth'],
-    metaDescription: 'Free 12-month marketing plan template for window tint shops. Covers seasonal strategy, budget allocation, and monthly action items for 2025.',
+    metaDescription: 'Free 12-month marketing plan template for window tint shops. Covers seasonal strategy, budget allocation, and monthly action items for 2026.',
     content: `Most window tint shops do not have a marketing plan. They run an ad when business is slow, post on Instagram when they remember, and hope for referrals the rest of the time. That is not a plan — it is a gamble.
 
 Here is a complete 12-month marketing plan built specifically for the window tint industry. It accounts for seasonality, budget reality, and the specific channels that drive tint customers.
@@ -432,14 +591,14 @@ Do not try to do everything at once. Start with Google Ads and Google Maps, then
   },
   {
     slug: 'window-tint-keywords-seo',
-    title: 'The 47 Best Keywords for Window Tint Shop SEO in 2025',
+    title: 'The 47 Best Keywords for Window Tint Shop SEO in 2026',
     excerpt: 'A complete keyword list organized by intent — from high-converting buyer keywords to long-tail blog topics that build authority.',
     category: 'SEO',
     author: 'Tint Marketing Pro Team',
     date: '2025-04-02',
     readTime: '9 min read',
     keywords: ['window tint keywords', 'tint shop SEO keywords', 'ceramic tint SEO'],
-    metaDescription: 'The 47 best SEO keywords for window tint shops in 2025. Organized by search intent with volume estimates and difficulty ratings.',
+    metaDescription: 'The 47 best SEO keywords for window tint shops in 2026. Organized by search intent with volume estimates and difficulty ratings.',
     content: `Keyword research is the foundation of every successful tint shop marketing campaign. Target the wrong keywords and you will attract people who want to DIY their tint or check their state's tint laws. Target the right keywords and you will attract people who are ready to book an appointment today.
 
 Here are 47 keywords organized by search intent, with notes on how to use each one.
@@ -957,7 +1116,7 @@ Tesla owners are high-value, referral-generating, quality-focused customers who 
   },
   {
     slug: 'tint-shop-crm-automation-guide',
-    title: 'The Complete CRM and Automation Guide for Window Tint Shops (2025)',
+    title: 'The Complete CRM and Automation Guide for Window Tint Shops (2026)',
     excerpt: 'How to set up a CRM, automate follow-ups, and build a lead management system that turns your tint shop into a booking machine.',
     category: 'Business Tips',
     author: 'Tint Marketing Pro Team',
@@ -1384,3 +1543,10 @@ That is a 37% revenue increase with fewer jobs and less wear on your team. The m
 Price for value. Offer tiers. Upsell windshield tint. Watch your revenue grow while your stress goes down.`,
   },
 ]
+
+export const blogPosts: BlogPost[] = rawBlogPosts.map((post) => ({
+  ...post,
+  dateModified: post.dateModified ?? '2026-06-29',
+  keywords: Array.from(new Set([...post.keywords, ...(extraKeywords[post.slug] ?? [])])),
+  ...blogImages[post.slug],
+}))

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { blogPosts } from '@/lib/blog-data'
 import BlogCard from '@/components/BlogCard'
 
-const categories = ['All', 'Google Ads', 'SEO', 'Local Ranking', 'Business Tips']
+const categories = ['All', 'Google Ads', 'SEO', 'Local Ranking', 'Business Tips', 'Social Media']
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState('All')

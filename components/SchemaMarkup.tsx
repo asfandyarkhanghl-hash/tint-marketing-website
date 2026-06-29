@@ -282,16 +282,27 @@ export function ArticleSchema({
   slug,
   datePublished,
   dateModified,
+  image,
 }: {
   title: string
   description: string
   slug: string
   datePublished: string
   dateModified?: string
+  image?: {
+    url: string
+    width: number
+    height: number
+    alt: string
+  }
 }) {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://tintmarketingpros.online/blog/${slug}`,
+    },
     headline: title,
     description,
     author: {
@@ -301,10 +312,23 @@ export function ArticleSchema({
     publisher: {
       '@type': 'Organization',
       name: 'Tint Marketing Pro',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://tintmarketingpros.online/images/optimized/logo.png',
+      },
     },
     url: `https://tintmarketingpros.online/blog/${slug}`,
     datePublished,
     dateModified: dateModified || datePublished,
+    image: image
+      ? {
+          '@type': 'ImageObject',
+          url: image.url,
+          width: image.width,
+          height: image.height,
+          caption: image.alt,
+        }
+      : undefined,
   }
 
   return (

@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { CheckCircle2 } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
+import Breadcrumbs from '@/components/Breadcrumbs'
+import ServiceHeroImage from '@/components/ServiceHeroImage'
+import { ServiceSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
   title: 'Social Media Marketing for Tint Shops',
@@ -27,16 +30,30 @@ export const metadata: Metadata = {
 export default function SocialMediaPage() {
   return (
     <>
+      <ServiceSchema
+        name="Social Media Marketing for Window Tint Shops"
+        description="Meta Ads, before/after content strategy, and retargeting campaigns built for window tint shops."
+        url="https://tintmarketingpros.online/services/social-media"
+      />
+
       <section className="pt-32 pb-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Social & Retargeting</p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Turn Scrollers Into <span className="accent-gradient">Bookings</span>
-            </h1>
-            <p className="text-muted text-xl leading-relaxed">
-              Before/after tint photos stop thumbs. Meta Ads with retargeting bring back the 97% of visitors who leave your site without calling. We handle the creative, targeting, and optimization.
-            </p>
+          <Breadcrumbs items={[{ name: 'Services', href: '/services' }, { name: 'Social Media', href: '/services/social-media' }]} />
+          <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.85fr]">
+            <div className="max-w-3xl">
+              <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Social & Retargeting</p>
+              <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+                Turn Scrollers Into <span className="accent-gradient">Bookings</span>
+              </h1>
+              <p className="text-muted text-xl leading-relaxed">
+                Before/after tint photos stop thumbs. Meta Ads with retargeting bring back the 97% of visitors who leave your site without calling. We handle the creative, targeting, and optimization.
+              </p>
+            </div>
+            <ServiceHeroImage
+              src="/images/services/social-media-tint-shop.jpg"
+              alt="Marketer capturing before and after window tint content in an installation bay"
+              priority
+            />
           </div>
         </div>
       </section>

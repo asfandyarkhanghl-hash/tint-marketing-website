@@ -1,4 +1,4 @@
-import { AlertTriangle, MapPin, Clock, PhoneCall, ArrowRight } from 'lucide-react'
+import { AlertTriangle, MapPin, Clock, PhoneCall, ArrowRight, Target, Users, Bot } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import ResultsCounter from '@/components/ResultsCounter'
@@ -13,6 +13,12 @@ import ServicesGrid from '@/components/ServicesGrid'
 import CRMShowcase from '@/components/CRMShowcase'
 import FeaturesGrid from '@/components/FeaturesGrid'
 import LeadMathSection from '@/components/LeadMathSection'
+
+const pillars = [
+  { icon: Target, title: '1. Lead Generation', description: 'Google Ads, Google Maps ranking, SEO, and social media that put your shop in front of buyers actively searching for tint services.', href: '/services' },
+  { icon: Users, title: '2. Lead Management', description: 'Every call recorded, every lead tracked, every dollar attributed. A CRM and follow-up system that makes sure nobody slips through the cracks.', href: '/services/lead-management' },
+  { icon: Bot, title: '3. AI Systems', description: 'A 24/7 AI chatbot and voice agent that answers questions, filters tire-kickers, and books appointments — even while you sleep.', href: '/services/ai-systems' },
+]
 
 const painPoints = [
   { icon: AlertTriangle, title: 'Your phone should be ringing 30+ times a month', description: 'Most tint shops get 5–10 leads a month and call it "normal." It is not. With the right system, 30–40 qualified leads per month is the baseline — not the ceiling.' },
@@ -58,6 +64,7 @@ export default function HomePage() {
                   alt="Tint shop owner excited about new lead notifications coming in on his phone"
                   width={600}
                   height={400}
+                  sizes="(min-width: 1024px) 576px, 0px"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -87,6 +94,42 @@ export default function HomePage() {
                 <h3 className="font-display text-lg font-bold mb-3">{point.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{point.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3-Pillar System */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-accent text-sm font-bold uppercase tracking-widest mb-3">How We Grow Your Shop</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold">
+              One System, <span className="accent-gradient">Three Pillars</span>
+            </h2>
+            <p className="text-muted mt-4 text-lg max-w-2xl mx-auto">
+              Most agencies stop at ads. We built a complete system that generates leads, manages them until they book, and automates the parts you cannot do manually.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {pillars.map((pillar, i) => (
+              <Link
+                key={pillar.title}
+                href={pillar.href}
+                className="group relative bg-surface border border-slate-200 rounded-2xl p-8 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
+                  <pillar.icon className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-display text-lg font-bold mb-3">{pillar.title}</h3>
+                <p className="text-muted text-sm leading-relaxed mb-4">{pillar.description}</p>
+                <span className="inline-flex items-center gap-1.5 text-accent text-sm font-semibold group-hover:gap-2.5 transition-all">
+                  Learn more <ArrowRight className="w-4 h-4" />
+                </span>
+                {i < pillars.length - 1 && (
+                  <ArrowRight className="hidden md:block absolute top-1/2 -right-4 -translate-y-1/2 w-6 h-6 text-slate-300" />
+                )}
+              </Link>
             ))}
           </div>
         </div>
@@ -133,6 +176,7 @@ export default function HomePage() {
                   alt="Tint shop owner viewing CRM dashboard showing 127 total leads, 63 appointments, $24,680 revenue, and 89 calls with lead tracking charts"
                   width={700}
                   height={500}
+                  sizes="(min-width: 1024px) 600px, 100vw"
                   className="w-full h-auto"
                 />
               </div>
@@ -152,6 +196,7 @@ export default function HomePage() {
                   alt="Call reporting dashboard showing 42 total calls with 95.24% answered rate and average call duration of 2 minutes 22 seconds"
                   width={600}
                   height={450}
+                  sizes="(min-width: 1024px) 600px, 100vw"
                   className="w-full h-auto"
                 />
               </div>
@@ -225,6 +270,7 @@ export default function HomePage() {
                   alt="Busy tint shop interior with multiple vehicles being tinted including Tesla and Porsche"
                   width={700}
                   height={470}
+                  sizes="(min-width: 1024px) 600px, 100vw"
                   className="w-full h-auto"
                 />
               </div>
@@ -234,6 +280,7 @@ export default function HomePage() {
                   alt="Professional window tint shop floor with BMW, Tesla, and SUV lined up for tinting"
                   width={700}
                   height={350}
+                  sizes="(min-width: 1024px) 600px, 100vw"
                   className="w-full h-auto"
                 />
               </div>
@@ -260,6 +307,7 @@ export default function HomePage() {
               alt="Marketing dashboard showing 847 leads, 236 appointments, $128,420 revenue with growth charts and channel breakdown for a tint shop"
               width={900}
               height={550}
+              sizes="(min-width: 768px) 768px, 100vw"
               className="w-full h-auto"
             />
           </div>

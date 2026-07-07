@@ -3,7 +3,7 @@ import { blogPosts } from '@/lib/blog-data'
 import { caseStudies } from '@/lib/case-studies-data'
 
 const baseUrl = 'https://tintmarketingpros.online'
-const lastModified = new Date('2026-06-29')
+const lastModified = new Date('2026-07-08')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -15,16 +15,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/case-studies',
     '/free-trial',
     '/platform',
+    '/pricing',
+    '/faq',
     '/services',
     '/services/google-ads',
     '/services/seo',
     '/services/shop-ranking',
     '/services/social-media',
+    '/services/lead-management',
+    '/services/ai-systems',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified,
     changeFrequency: route === '' ? 'weekly' : 'monthly',
     priority: route === '' ? 1 : 0.8,
+  })) satisfies MetadataRoute.Sitemap
+
+  const legalRoutes = ['/privacy-policy', '/terms-of-service'].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified,
+    changeFrequency: 'yearly',
+    priority: 0.3,
   })) satisfies MetadataRoute.Sitemap
 
   const blogRoutes = blogPosts.map((post) => ({
@@ -43,5 +54,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: [`${baseUrl}/images/optimized/stats-dashboard.jpg`],
   })) satisfies MetadataRoute.Sitemap
 
-  return [...staticRoutes, ...blogRoutes, ...caseStudyRoutes]
+  return [...staticRoutes, ...legalRoutes, ...blogRoutes, ...caseStudyRoutes]
 }

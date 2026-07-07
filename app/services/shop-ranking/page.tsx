@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
-import { CheckCircle2 } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
+import Breadcrumbs from '@/components/Breadcrumbs'
+import ServiceHeroImage from '@/components/ServiceHeroImage'
+import { ServiceSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
   title: 'Google Maps Ranking for Tint Shops',
@@ -44,20 +46,34 @@ const timeline = [
 export default function ShopRankingPage() {
   return (
     <>
+      <ServiceSchema
+        name="Google Maps Ranking for Window Tint Shops"
+        description="Google Business Profile optimization, citation building, and review generation to rank window tint shops in the Google Maps top 3."
+        url="https://tintmarketingpros.online/services/shop-ranking"
+      />
+
       <section className="pt-32 pb-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Google Maps</p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Google Maps Ranking — <span className="accent-gradient">Dominate the Local Pack</span>
-            </h1>
-            <p className="text-muted text-xl leading-relaxed mb-8">
-              73% of local tint bookings come from the Google Maps top 3. If you are not there, your competitors are taking your customers.
-            </p>
-            <div className="bg-surface border border-accent/20 rounded-xl p-6 inline-block">
-              <p className="font-display text-4xl font-bold text-accent">73%</p>
-              <p className="text-sm text-muted">of local tint bookings come from Maps top 3</p>
+          <Breadcrumbs items={[{ name: 'Services', href: '/services' }, { name: 'Shop Ranking', href: '/services/shop-ranking' }]} />
+          <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.85fr]">
+            <div className="max-w-3xl">
+              <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Google Maps</p>
+              <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+                Google Maps Ranking — <span className="accent-gradient">Dominate the Local Pack</span>
+              </h1>
+              <p className="text-muted text-xl leading-relaxed mb-8">
+                73% of local tint bookings come from the Google Maps top 3. If you are not there, your competitors are taking your customers.
+              </p>
+              <div className="bg-surface border border-accent/20 rounded-xl p-6 inline-block">
+                <p className="font-display text-4xl font-bold text-accent">73%</p>
+                <p className="text-sm text-muted">of local tint bookings come from Maps top 3</p>
+              </div>
             </div>
+            <ServiceHeroImage
+              src="/images/services/google-maps-tint-shop.jpg"
+              alt="Window tint shop owner reviewing Google Maps rankings on a tablet"
+              priority
+            />
           </div>
         </div>
       </section>

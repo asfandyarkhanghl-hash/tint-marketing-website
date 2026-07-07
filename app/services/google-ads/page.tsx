@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 import ROICalculator from '@/components/ROICalculator'
+import Breadcrumbs from '@/components/Breadcrumbs'
+import ServiceHeroImage from '@/components/ServiceHeroImage'
+import { ServiceSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
   title: 'Google Ads for Window Tint Shops',
@@ -41,21 +43,35 @@ const failures = [
 export default function GoogleAdsPage() {
   return (
     <>
+      <ServiceSchema
+        name="Google Ads for Window Tint Shops"
+        description="Precision-targeted Google Ads campaigns with tint-specific keyword and negative-keyword strategy for window tint shops."
+        url="https://tintmarketingpros.online/services/google-ads"
+      />
+
       <section className="pt-32 pb-20 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_60%)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-3xl">
-            <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Google Ads</p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Google Ads for Window Tint Shops — <span className="accent-gradient">Fill Your Schedule in 14 Days</span>
-            </h1>
-            <p className="text-muted text-xl leading-relaxed mb-8">
-              We build precision campaigns that target buyers actively searching for tint services in your city. No wasted clicks, no generic keywords, no guesswork.
-            </p>
-            <div className="bg-surface border border-accent/20 rounded-xl p-6 inline-block">
-              <p className="text-sm text-muted mb-1">Average across our clients</p>
-              <p className="font-display text-4xl font-bold text-accent">$12 cost per lead</p>
+          <Breadcrumbs items={[{ name: 'Services', href: '/services' }, { name: 'Google Ads', href: '/services/google-ads' }]} />
+          <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.85fr]">
+            <div className="max-w-3xl">
+              <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Google Ads</p>
+              <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+                Google Ads for Window Tint Shops — <span className="accent-gradient">Fill Your Schedule in 14 Days</span>
+              </h1>
+              <p className="text-muted text-xl leading-relaxed mb-8">
+                We build precision campaigns that target buyers actively searching for tint services in your city. No wasted clicks, no generic keywords, no guesswork.
+              </p>
+              <div className="bg-surface border border-accent/20 rounded-xl p-6 inline-block">
+                <p className="text-sm text-muted mb-1">Average across our clients</p>
+                <p className="font-display text-4xl font-bold text-accent">$12 cost per lead</p>
+              </div>
             </div>
+            <ServiceHeroImage
+              src="/images/services/google-ads-tint-shop.jpg"
+              alt="Tint shop owner reviewing Google Ads performance beside a freshly tinted vehicle"
+              priority
+            />
           </div>
         </div>
       </section>

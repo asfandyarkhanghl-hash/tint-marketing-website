@@ -108,6 +108,7 @@ export default function HeroSection() {
                 alt="Tint shop owner receiving new leads on phone with lead notifications and growth chart showing 127 new leads this month"
                 width={700}
                 height={500}
+                sizes="(min-width: 1024px) 600px, 0px"
                 className="w-full h-auto object-cover"
                 priority
               />

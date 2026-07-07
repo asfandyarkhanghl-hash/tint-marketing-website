@@ -1,11 +1,21 @@
 import type { Metadata } from 'next'
 import CaseStudyCard from '@/components/CaseStudyCard'
 import CTABanner from '@/components/CTABanner'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import { caseStudies } from '@/lib/case-studies-data'
 
 export const metadata: Metadata = {
   title: 'Case Studies — Real Tint Shop Results',
   description: 'See how we helped window tint shops across the US generate more leads, rank on Google Maps, and grow revenue. Real data, real shops.',
+  alternates: {
+    canonical: 'https://tintmarketingpros.online/case-studies',
+  },
+  openGraph: {
+    title: 'Case Studies — Real Tint Shop Results',
+    description: 'See how we helped window tint shops across the US generate more leads, rank on Google Maps, and grow revenue.',
+    url: 'https://tintmarketingpros.online/case-studies',
+    type: 'website',
+  },
 }
 
 export default function CaseStudiesPage() {
@@ -13,6 +23,7 @@ export default function CaseStudiesPage() {
     <>
       <section className="pt-32 pb-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ name: 'Case Studies', href: '/case-studies' }]} />
           <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Proof</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
             Real Shops. <span className="accent-gradient">Real Results.</span>

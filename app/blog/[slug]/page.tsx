@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ArrowLeft, Clock, User } from 'lucide-react'
 import { blogPosts } from '@/lib/blog-data'
 import { ArticleSchema } from '@/components/SchemaMarkup'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }))
@@ -91,6 +92,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <article className="pt-32 pb-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ name: 'Blog', href: '/blog' }, { name: post.title, href: `/blog/${post.slug}` }]} />
           <Link href="/blog" className="inline-flex items-center gap-2 text-muted hover:text-accent text-sm mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Blog
           </Link>

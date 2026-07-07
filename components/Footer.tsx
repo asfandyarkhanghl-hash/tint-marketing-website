@@ -6,11 +6,15 @@ const serviceLinks = [
   { name: 'SEO', href: '/services/seo' },
   { name: 'Shop Ranking', href: '/services/shop-ranking' },
   { name: 'Social Media', href: '/services/social-media' },
+  { name: 'Lead Management', href: '/services/lead-management' },
+  { name: 'AI Systems', href: '/services/ai-systems' },
 ]
 
 const resourceLinks = [
   { name: 'Platform & CRM', href: '/platform' },
+  { name: 'Pricing', href: '/pricing' },
   { name: 'ROI Calculator', href: '/calculator' },
+  { name: 'FAQ', href: '/faq' },
   { name: 'Blog', href: '/blog' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Free Trial', href: '/free-trial' },
@@ -19,6 +23,8 @@ const resourceLinks = [
 const companyLinks = [
   { name: 'About', href: '/about' },
   { name: 'Book a Call', href: '/book' },
+  { name: 'Privacy Policy', href: '/privacy-policy' },
+  { name: 'Terms of Service', href: '/terms-of-service' },
 ]
 
 export default function Footer() {

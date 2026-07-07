@@ -11,12 +11,14 @@ const services = [
   { name: 'SEO', href: '/services/seo' },
   { name: 'Shop Ranking', href: '/services/shop-ranking' },
   { name: 'Social Media', href: '/services/social-media' },
+  { name: 'Lead Management', href: '/services/lead-management' },
+  { name: 'AI Systems', href: '/services/ai-systems' },
 ]
 
 const navLinks = [
   { name: 'Services', href: '/services', hasDropdown: true },
   { name: 'Platform', href: '/platform' },
-  { name: 'ROI Calculator', href: '/calculator' },
+  { name: 'Pricing', href: '/pricing' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'About', href: '/about' },

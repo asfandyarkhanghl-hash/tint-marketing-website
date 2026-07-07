@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { CheckCircle2 } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
+import Breadcrumbs from '@/components/Breadcrumbs'
+import ServiceHeroImage from '@/components/ServiceHeroImage'
+import { ServiceSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
   title: 'SEO for Window Tint Shops',
@@ -40,20 +43,34 @@ const calendar = [
 export default function SEOPage() {
   return (
     <>
+      <ServiceSchema
+        name="SEO for Window Tint Shops"
+        description="Long-term organic SEO strategy — technical SEO, content, citations, and link building — built for window tint shops."
+        url="https://tintmarketingpros.online/services/seo"
+      />
+
       <section className="pt-32 pb-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">SEO</p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Window Tint SEO — <span className="accent-gradient">Rank Without Paying Per Click</span>
-            </h1>
-            <p className="text-muted text-xl leading-relaxed mb-8">
-              Organic traffic compounds over time. We build your tint shop&apos;s authority on Google so you get free leads month after month.
-            </p>
-            <div className="bg-surface border border-accent/20 rounded-xl p-6 inline-block">
-              <p className="text-sm text-muted mb-1">Track record</p>
-              <p className="font-display text-4xl font-bold text-accent">Page 1 in under 60 days</p>
+          <Breadcrumbs items={[{ name: 'Services', href: '/services' }, { name: 'SEO', href: '/services/seo' }]} />
+          <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.85fr]">
+            <div className="max-w-3xl">
+              <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">SEO</p>
+              <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+                Window Tint SEO — <span className="accent-gradient">Rank Without Paying Per Click</span>
+              </h1>
+              <p className="text-muted text-xl leading-relaxed mb-8">
+                Organic traffic compounds over time. We build your tint shop&apos;s authority on Google so you get free leads month after month.
+              </p>
+              <div className="bg-surface border border-accent/20 rounded-xl p-6 inline-block">
+                <p className="text-sm text-muted mb-1">Track record</p>
+                <p className="font-display text-4xl font-bold text-accent">Page 1 in under 60 days</p>
+              </div>
             </div>
+            <ServiceHeroImage
+              src="/images/services/seo-tint-shop.jpg"
+              alt="Tint shop owner planning local SEO content and search rankings at the front desk"
+              priority
+            />
           </div>
         </div>
       </section>

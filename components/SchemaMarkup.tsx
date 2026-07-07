@@ -15,6 +15,8 @@ export function OrganizationSchema() {
       'Search Engine Optimization',
       'Local SEO',
       'Social Media Marketing',
+      'CRM & Lead Management',
+      'AI Automation Systems',
     ],
     knowsAbout: [
       'Window Tinting',
@@ -89,6 +91,22 @@ export function LocalBusinessSchema() {
             '@type': 'Service',
             name: 'Social Media & Retargeting',
             url: 'https://tintmarketingpros.online/services/social-media',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Lead Management & CRM',
+            url: 'https://tintmarketingpros.online/services/lead-management',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'AI Systems for Tint Shops',
+            url: 'https://tintmarketingpros.online/services/ai-systems',
           },
         },
       ],
@@ -265,7 +283,49 @@ export function FAQSchema() {
           text: 'We work with tint shops across the entire United States. Local market research is included in your onboarding.',
         },
       },
+      {
+        '@type': 'Question',
+        name: 'I run a mobile tint business with no storefront. Can you still help?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. We set your Google Business Profile up as a service-area business, build location pages for every city you cover, and run ads targeting the neighborhoods you actually serve.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does the AI system work — will it feel robotic to customers?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The AI chatbot and voice agent are trained on your shop’s exact services, pricing ranges, and tone, and hand off to your team the moment a lead is ready to book.',
+        },
+      },
     ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+export function FAQPageSchema({
+  items,
+}: {
+  items: { question: string; answer: string }[]
+}) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
   }
 
   return (

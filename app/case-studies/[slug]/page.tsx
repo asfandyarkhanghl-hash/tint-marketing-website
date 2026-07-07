@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { caseStudies } from '@/lib/case-studies-data'
 import CTABanner from '@/components/CTABanner'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateStaticParams() {
   return caseStudies.map((cs) => ({ slug: cs.slug }))
@@ -58,6 +59,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     <>
       <section className="pt-32 pb-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ name: 'Case Studies', href: '/case-studies' }, { name: cs.shopName, href: `/case-studies/${cs.slug}` }]} />
           <Link href="/case-studies" className="inline-flex items-center gap-2 text-muted hover:text-accent text-sm mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Case Studies
           </Link>

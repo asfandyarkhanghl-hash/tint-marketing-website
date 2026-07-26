@@ -1,13 +1,15 @@
 import type { Metadata } from 'next'
-import { CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
+import { CheckCircle2, ArrowRight } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ServiceHeroImage from '@/components/ServiceHeroImage'
+import Reveal from '@/components/Reveal'
 import { ServiceSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'SEO for Window Tint Shops',
-  description: 'Long-term SEO for window tint shops. We rank your site for "window tint [city]" and high-intent searches. Page 1 rankings in 60 days.',
+  title: 'SEO for Window Tint Shops | Window Tint SEO Agency',
+  description: 'Long-term SEO for window tint shops from a dedicated window tint SEO agency. We rank your site for "window tint [city]" and high-intent searches. Page 1 rankings in 60 days.',
   keywords: [
     'window tint SEO',
     'tint shop search engine optimization',
@@ -15,12 +17,15 @@ export const metadata: Metadata = {
     'local SEO tint business',
     'tint shop organic traffic',
     'window tint content marketing',
+    'window tinting seo agency',
+    'seo window tint marketing',
+    'window tint shop seo strategies',
   ],
   alternates: {
     canonical: 'https://tintmarketingpros.online/services/seo',
   },
   openGraph: {
-    title: 'SEO for Window Tint Shops',
+    title: 'SEO for Window Tint Shops | Window Tint SEO Agency',
     description: 'Long-term SEO for window tint shops. Page 1 rankings in 60 days. Content, backlinks, and technical SEO that compound.',
     url: 'https://tintmarketingpros.online/services/seo',
     type: 'website',
@@ -76,12 +81,12 @@ export default function SEOPage() {
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             How Window Tint SEO Is <span className="accent-gradient">Different</span>
           </h2>
           <p className="text-muted text-lg mb-12 max-w-2xl">
-            Generic SEO agencies optimize for volume keywords. Tint shops need hyper-local, high-intent keywords that target buyers in your specific city and service area.
+            Generic SEO agencies optimize for volume keywords. Tint and window film shops need hyper-local, high-intent keywords that target buyers in your specific city and service area.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
@@ -101,11 +106,11 @@ export default function SEOPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             The 4 Pillars We <span className="accent-gradient">Optimize</span>
           </h2>
@@ -124,11 +129,11 @@ export default function SEOPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             Sample Content <span className="accent-gradient">Calendar</span>
           </h2>
@@ -140,11 +145,27 @@ export default function SEOPage() {
               </div>
             ))}
           </div>
+        </Reveal>
+      </section>
+
+      <section className="py-16 bg-surface border-t border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/blog/window-tint-keywords-seo" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">The 47 best keywords for tint shop SEO</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link href="/services/shop-ranking" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">Pair SEO with Google Maps ranking</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-center mb-4">
             Start Ranking <span className="accent-gradient">Organically</span>
           </h2>
@@ -152,7 +173,7 @@ export default function SEOPage() {
           <div className="bg-surface border border-border rounded-2xl p-8">
             <LeadForm />
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   )

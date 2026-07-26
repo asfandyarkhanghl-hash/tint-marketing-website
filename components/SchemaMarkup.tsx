@@ -51,12 +51,6 @@ export function LocalBusinessSchema() {
       name: 'United States',
     },
     priceRange: '$$',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '63',
-      bestRating: '5',
-    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Window Tint Shop Marketing Services',
@@ -184,52 +178,6 @@ export function BreadcrumbSchema({
   )
 }
 
-export function AggregateRatingSchema() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: 'Tint Marketing Pro',
-    url: 'https://tintmarketingpros.online',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '63',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Marcus T.' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody:
-          'I spent 6 years building this business on referrals alone. In 60 days with Tint Marketing Pro, I generated more leads than I got in the entire previous year.',
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Sandra R.' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody:
-          'They cut my spend in half and tripled my leads. Now I can see every single lead source in a dashboard.',
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'James K.' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody:
-          'I went from 5 calls a week to 30+ calls a week. Tint Marketing Pro got me into the top 3 in 47 days.',
-      },
-    ],
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
-
 export function FAQSchema() {
   const schema = {
     '@context': 'https://schema.org',
@@ -297,6 +245,38 @@ export function FAQSchema() {
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'The AI chatbot and voice agent are trained on your shop’s exact services, pricing ranges, and tone, and hand off to your team the moment a lead is ready to book.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What results should a tint marketing agency actually deliver?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'At minimum: a documented number of qualified leads per month, cost-per-lead you can see in real time, call recordings tied to the campaign that generated them, and Google Maps ranking movement you can verify yourself. If an agency can\'t show you those four things in a dashboard, you\'re paying for guesswork.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I stop missing leads at my tint shop?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Three things fix most missed-lead problems: automatic missed-call text-back so nobody who calls while you\'re tinting a car goes silent, a follow-up sequence that runs within 5 minutes of a new lead instead of hours later, and a single CRM inbox so leads from Google, Facebook, and your website all land in one place instead of getting lost across texts and voicemail.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you work with window film and PPF businesses, not just auto tint?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Many of our clients install residential and commercial window film and paint protection film alongside auto tint. The lead generation, ranking, and CRM systems we build work the same way for window film dealers as they do for auto tint shops.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What does full-funnel advertising mean for a tint shop?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Full-funnel means covering every stage a customer goes through — Google Ads and Maps ranking to capture people actively searching, retargeting ads for people who visited but didn\'t book, and CRM follow-up to convert the leads you already have. Most shops only run the first stage and lose the other two.',
         },
       },
     ],

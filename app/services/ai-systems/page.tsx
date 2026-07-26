@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Bot, Filter, UserCheck, Clock, MessagesSquare, Brain } from 'lucide-react'
+import { Bot, Filter, UserCheck, Clock, MessagesSquare, Brain, ArrowRight } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ServiceHeroImage from '@/components/ServiceHeroImage'
+import Reveal from '@/components/Reveal'
 import { ServiceSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
@@ -69,7 +70,7 @@ export default function AiSystemsPage() {
                 An AI Assistant That Never <span className="accent-gradient">Clocks Out</span>
               </h1>
               <p className="text-muted text-xl leading-relaxed mb-8">
-                A 24/7 AI chatbot and voice agent that answers tint questions, filters out tire-kickers, qualifies real buyers, and books appointments — while you are mid-install or asleep.
+                A 24/7 AI chatbot and voice agent that answers tint questions, filters out tire-kickers, qualifies real buyers, and books appointments for tint and window film shops — while you are mid-install or asleep.
               </p>
               <div className="bg-surface border border-accent/20 rounded-xl p-6 inline-block">
                 <p className="text-sm text-muted mb-1">Coverage</p>
@@ -86,7 +87,7 @@ export default function AiSystemsPage() {
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             The Gap AI Systems <span className="accent-gradient">Close</span>
           </h2>
@@ -99,11 +100,11 @@ export default function AiSystemsPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-accent text-sm font-bold uppercase tracking-widest mb-3">What&apos;s Included</p>
             <h2 className="font-display text-4xl md:text-5xl font-bold">
@@ -121,11 +122,11 @@ export default function AiSystemsPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-slate-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-10 text-center">
             Common <span className="accent-gradient">Questions</span>
           </h2>
@@ -142,11 +143,27 @@ export default function AiSystemsPage() {
             <Link href="/blog/ai-chatbot-for-window-tint-shops" className="text-accent font-semibold hover:underline">how AI chatbots book jobs while you sleep</Link>, or explore the{' '}
             <Link href="/platform" className="text-accent font-semibold hover:underline">full platform</Link>.
           </p>
+        </Reveal>
+      </section>
+
+      <section className="py-16 bg-surface border-t border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/blog/ai-chatbot-for-window-tint-shops" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">How AI chatbots book jobs while you sleep</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link href="/services/lead-management" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">See how AI plugs into your CRM</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-center mb-4">
             Let AI Cover the Hours <span className="accent-gradient">You Cannot</span>
           </h2>
@@ -156,7 +173,7 @@ export default function AiSystemsPage() {
           <div className="bg-surface border border-border rounded-2xl p-8">
             <LeadForm />
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   )

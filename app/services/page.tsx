@@ -4,9 +4,10 @@ import Link from 'next/link'
 import { Search, MapPin, TrendingUp, Share2, Bot, Users, ArrowRight } from 'lucide-react'
 import CTABanner from '@/components/CTABanner'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import Reveal from '@/components/Reveal'
 
 export const metadata: Metadata = {
-  title: 'Window Tint Shop Marketing Services',
+  title: 'Window Tint Shop Marketing Agency | Services',
   description: 'Lead generation, lead management, and AI systems built exclusively for window tint shops — Google Ads, Local SEO, CRM, and AI chatbots. Free trial available.',
   keywords: [
     'window tint marketing services',
@@ -17,12 +18,15 @@ export const metadata: Metadata = {
     'tint shop lead management',
     'AI for tint shops',
     'tint business marketing',
+    'digital marketing for window tint shops',
+    'marketing agency for window tint businesses',
+    'window tint marketing agency',
   ],
   alternates: {
     canonical: 'https://tintmarketingpros.online/services',
   },
   openGraph: {
-    title: 'Window Tint Shop Marketing Services',
+    title: 'Window Tint Shop Marketing Agency | Services',
     description: 'Lead generation, lead management, and AI systems built exclusively for window tint shops.',
     url: 'https://tintmarketingpros.online/services',
     type: 'website',
@@ -68,10 +72,10 @@ export default function ServicesPage() {
           <div className="max-w-3xl">
             <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-3">Our Services</p>
             <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              Marketing Built for <span className="accent-gradient">Tint Shops</span>
+              A Marketing Agency Built for <span className="accent-gradient">Tint Shops</span>
             </h1>
             <p className="text-muted text-xl leading-relaxed">
-              Every service we offer falls into three pillars: get more leads, never lose a single one, and automate the busywork with AI. No templates. No generic playbooks. Just strategies that work for your industry.
+              Every service we offer falls into three pillars: get more leads, never lose a single one, and automate the busywork with AI. No templates. No generic playbooks. Just strategies built for tint and window film shops.
             </p>
           </div>
         </div>
@@ -79,7 +83,7 @@ export default function ServicesPage() {
 
       {pillars.map((pillar, pIndex) => (
         <section key={pillar.title} className={`py-24 ${pIndex % 2 === 0 ? 'bg-surface' : 'bg-primary'}`}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
               <p className="text-accent text-sm font-bold uppercase tracking-widest mb-3">{pillar.label}</p>
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">{pillar.title}</h2>
@@ -122,7 +126,7 @@ export default function ServicesPage() {
                 </Link>
               ))}
             </div>
-          </div>
+          </Reveal>
         </section>
       ))}
 

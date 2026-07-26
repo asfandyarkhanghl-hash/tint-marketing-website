@@ -31,11 +31,11 @@ function DecimalCounter({ value, prefix = '', suffix = '' }: { value: number; pr
   return <span ref={ref} className="font-display text-5xl md:text-6xl font-bold text-white">{prefix}{count.toFixed(1)}{suffix}</span>
 }
 
-const stats = [
-  { value: 12400, suffix: '+', label: 'Leads Generated for Tint Shops' },
-  { value: 63, label: 'Tint Shops We Manage' },
-  { value: 2.3, prefix: '$', suffix: 'M+', label: 'In Revenue Driven to Clients' },
-  { value: 38, label: 'Avg. Leads Per Client/Month' },
+const stats: { value: number; suffix?: string; prefix?: string; label: string }[] = [
+  { value: 5, suffix: ' min', label: 'Average Lead Response Time' },
+  { value: 24, suffix: '/7', label: 'AI Chat & Voice Coverage' },
+  { value: 30, suffix: '–60d', label: 'To Top 3 on Google Maps' },
+  { value: 0, label: 'Contracts. Cancel Anytime.' },
 ]
 
 export default function ResultsCounter() {
@@ -45,7 +45,7 @@ export default function ResultsCounter() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Top tagline */}
         <p className="text-center text-sm text-accent-light font-semibold uppercase tracking-widest mb-10">
-          Real numbers. Real tint shops. No fluff.
+          Built specifically for how tint shops actually book customers
         </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
           {stats.map((stat, i) => (

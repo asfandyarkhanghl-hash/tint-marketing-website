@@ -52,7 +52,7 @@ function FeatureSection({
 }
 
 const crmFeatures = [
-  { icon: Users, title: 'Contact Management', desc: 'Full customer database with vehicle history, tint preferences, service records, and lifetime value tracking. Tag and segment by service type, vehicle, or location.' },
+  { icon: Users, title: 'Contact Management', desc: 'Full customer database with vehicle history, tint and window film preferences, service records, and lifetime value tracking. Tag and segment by service type, vehicle, or location.' },
   { icon: MessagesSquare, title: 'Unified Inbox', desc: 'Every conversation in one place — SMS, email, Facebook Messenger, Instagram DMs, Google Business Messages, and WhatsApp. Never miss a lead message again.' },
   { icon: Phone, title: 'Call Tracking & Recording', desc: 'Every inbound call tracked to its ad source. Calls recorded for training and quality. See exactly which campaigns drive phone calls and booked jobs.' },
   { icon: PhoneMissed, title: 'Missed Call Text-Back', desc: 'When you miss a call mid-install, our system auto-texts the caller within 30 seconds: "Hey, we just missed your call — how can we help?" Recovers 40%+ of missed leads.' },

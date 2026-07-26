@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle2, Phone, GitBranch, PhoneMissed, BarChart3, Users } from 'lucide-react'
+import { CheckCircle2, Phone, GitBranch, PhoneMissed, BarChart3, Users, ArrowRight } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ServiceHeroImage from '@/components/ServiceHeroImage'
+import Reveal from '@/components/Reveal'
 import { ServiceSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
@@ -39,7 +40,7 @@ const features = [
   { icon: Phone, title: 'Call Tracking & Recording', desc: 'Every inbound call is recorded and attributed to the exact ad or keyword that generated it. Audit lead quality and coach your front desk from real conversations.' },
   { icon: PhoneMissed, title: 'Missed Call Text-Back', desc: 'Mid-install and can\'t answer? The system auto-texts the caller within 30 seconds so they hear from you before they dial the next shop.' },
   { icon: GitBranch, title: 'Visual Sales Pipeline', desc: 'Drag-and-drop stages from New Lead → Qualified → Quoted → Booked → Completed. See exactly where every deal is stuck and follow up before it goes cold.' },
-  { icon: BarChart3, title: 'Revenue Attribution', desc: 'Every booked job traced back to its campaign. See real cost-per-booking, not just cost-per-click, so budget decisions are based on revenue, not guesses.' },
+  { icon: BarChart3, title: 'Revenue Attribution', desc: 'Every booked job traced back to its campaign. See real cost-per-booking, not just cost-per-click. The same system tracks material costs, labor, and profit per job, so budget decisions are based on real numbers, not guesses.' },
   { icon: CheckCircle2, title: '5-Minute Follow-Up Automation', desc: 'New leads get an instant text acknowledging their inquiry and setting a callback expectation — the single highest-ROI change most shops ever make.' },
 ]
 
@@ -85,7 +86,7 @@ export default function LeadManagementPage() {
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             Why Tint Shops <span className="accent-gradient">Bleed Leads</span>
           </h2>
@@ -98,11 +99,11 @@ export default function LeadManagementPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-accent text-sm font-bold uppercase tracking-widest mb-3">What&apos;s Included</p>
             <h2 className="font-display text-4xl md:text-5xl font-bold">
@@ -120,11 +121,11 @@ export default function LeadManagementPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((s) => (
               <div key={s.label} className="text-center bg-white border border-slate-200 rounded-2xl p-8">
@@ -134,15 +135,31 @@ export default function LeadManagementPage() {
             ))}
           </div>
           <p className="text-center text-muted mt-10 max-w-2xl mx-auto">
-            Want the full breakdown of how the CRM, pipelines, and automations work together? See the{' '}
+            Want the full breakdown of how the CRM, pipelines, and automations work together for tint and window film shops? See the{' '}
             <Link href="/platform" className="text-accent font-semibold hover:underline">full platform tour</Link>, or read our{' '}
             <Link href="/blog/tint-shop-crm-automation-guide" className="text-accent font-semibold hover:underline">CRM & automation guide</Link>.
           </p>
+        </Reveal>
+      </section>
+
+      <section className="py-16 bg-surface border-t border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/blog/tint-shop-crm-automation-guide" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">The complete CRM & automation guide</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link href="/blog/tint-shop-lead-follow-up" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">Why shops lose 67% of leads (and the fix)</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-center mb-4">
             Stop Losing Leads <span className="accent-gradient">to Slow Follow-Up</span>
           </h2>
@@ -152,7 +169,7 @@ export default function LeadManagementPage() {
           <div className="bg-surface border border-border rounded-2xl p-8">
             <LeadForm />
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   )

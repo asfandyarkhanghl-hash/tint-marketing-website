@@ -201,6 +201,46 @@ const blogImages: Record<string, Pick<BlogPost, 'featuredImage' | 'inlineImages'
       height: 1024,
     },
   },
+  'how-to-get-more-leads-window-tint-shop': {
+    featuredImage: {
+      src: '/images/optimized/owner-leads.jpg',
+      alt: 'Tint shop owner reviewing a growing list of new customer leads on his phone',
+      width: 1200,
+      height: 800,
+    },
+  },
+  'ppc-google-ads-management-window-tint-dealers': {
+    featuredImage: {
+      src: '/images/blog/google-ads-window-tint-shops.jpg',
+      alt: 'Marketing manager reviewing a PPC campaign dashboard for a window tint dealer',
+      width: 1320,
+      height: 704,
+    },
+  },
+  'landing-page-conversion-rate-optimization-window-tint': {
+    featuredImage: {
+      src: '/images/optimized/stats-dashboard.jpg',
+      alt: 'Conversion rate analytics dashboard for a window tint shop landing page showing visitor and booking data',
+      width: 900,
+      height: 550,
+    },
+  },
+  'email-sms-marketing-window-tint-film-businesses': {
+    featuredImage: {
+      src: '/images/optimized/call-report.jpg',
+      alt: 'Marketing reporting dashboard showing email and SMS campaign performance for a window tint and film business',
+      width: 600,
+      height: 450,
+    },
+  },
+  'what-results-should-tint-marketing-agency-deliver': {
+    featuredImage: {
+      src: '/images/optimized/owner-dashboard.jpg',
+      alt: 'Window tint shop owner reviewing a marketing agency reporting dashboard with lead and revenue attribution',
+      width: 700,
+      height: 500,
+    },
+  },
 }
 
 const extraKeywords: Record<string, string[]> = {
@@ -221,7 +261,12 @@ const extraKeywords: Record<string, string[]> = {
   'window-tint-shop-marketing-cost': ['window tint marketing budget', 'tint shop marketing cost', 'how much to spend on tint shop ads'],
   'window-tint-shop-slow-season-guide': ['tint shop slow season', 'window tint winter marketing', 'tint shop cash flow off season'],
   'hiring-window-tint-installers': ['hiring window tint installers', 'tint shop staffing', 'scaling a tint business', 'window tint employee training'],
-  'choosing-a-window-tint-marketing-agency': ['choosing a marketing agency tint shop', 'window tint marketing agency questions', 'best marketing agency for tint shops'],
+  'choosing-a-window-tint-marketing-agency': ['choosing a marketing agency tint shop', 'window tint marketing agency questions', 'best marketing agency for tint shops', 'lead generation agency for window tint shops'],
+  'how-to-get-more-leads-window-tint-shop': ['leads for window tint shops', 'best way to generate leads for a window tint business', 'how to get more leads for a window tint shop', 'get more tint customers', 'window tint lead generation'],
+  'ppc-google-ads-management-window-tint-dealers': ['ppc for tint shops', 'window tinting google ads management agency', 'window tint dealer google ads', 'google ads for window tint installers', 'marketing for tint dealers', 'marketing for tint owner'],
+  'landing-page-conversion-rate-optimization-window-tint': ['landing page optimization for window tint businesses', 'window tint conversion rate optimization', 'window tint shop seo strategies'],
+  'email-sms-marketing-window-tint-film-businesses': ['email marketing for window tint businesses', 'email and sms marketing for window tint and film businesses', 'tint social media'],
+  'what-results-should-tint-marketing-agency-deliver': ['what results should a tint marketing agency deliver', 'marketing reporting for window tint businesses', 'window tint marketing analytics', 'marketing analytics for window tint and film businesses', 'full funnel advertising for window tint shops', 'marketing results for window tint shops'],
 }
 
 const rawBlogPosts: RawBlogPost[] = [
@@ -2094,6 +2139,297 @@ Before signing with any agency, you should be able to answer yes to all of the f
 ## The Bottom Line
 
 The tint industry has specific customers, specific seasonality, and specific keyword traps that a generalist agency will learn on your dime. Ask these 12 questions before signing with anyone, and you will quickly find out whether you are talking to a genuine specialist or a general agency hoping to figure your industry out along the way.`,
+  },
+  {
+    slug: 'how-to-get-more-leads-window-tint-shop',
+    title: 'How to Get More Leads for Your Window Tint Shop in 2026 (7 Proven Ways)',
+    excerpt: 'Seven concrete ways to generate more leads for your tint shop — from Google Maps and Google Ads to referral systems and speed-to-lead follow-up.',
+    category: 'Business Tips',
+    author: 'Tint Marketing Pro Team',
+    date: '2026-07-11',
+    readTime: '9 min read',
+    keywords: ['leads for window tint shops', 'how to get more leads for a window tint shop', 'window tint lead generation'],
+    metaDescription: 'Seven proven ways to get more leads for your window tint shop in 2026: Google Maps, Google Ads, review velocity, referrals, retargeting, and speed-to-lead.',
+    content: `"How do I get more leads?" is the single most common question we hear from window tint and window film shop owners. It usually comes after a slow week, a slower month, or a growing frustration that referrals alone are not enough to keep the schedule full.
+
+The honest answer: there is no single lead source that fixes this. Shops that consistently get 30+ qualified leads a month are running several channels at once, each doing a specific job. Here are the seven that actually move the needle, in the order we recommend building them.
+
+## 1. Fix Your Google Maps Presence First
+
+Before you spend a dollar on ads, make sure your Google Business Profile is fully optimized. The majority of local tint searches — "window tint near me," "ceramic tint [city]" — surface the Google Maps top 3 before any website result. If you are not in that top 3, you are losing leads to whichever shop is.
+
+At minimum: claim your profile, pick "Window Tinting Service" as your primary category, upload photos every week, and respond to every review. We cover the full process in our [Google Maps ranking guide](/blog/window-tint-shop-google-maps-ranking).
+
+## 2. Run Google Ads With Tint-Specific Negative Keywords
+
+Google Ads is the fastest way to generate leads on demand — but only if the campaign is built for the tint industry specifically. Generic campaigns waste 50–60% of spend on DIY searchers, tint-law questions, and people looking for adhesive film on Amazon.
+
+A properly built campaign, with tint-specific negative keywords and dedicated landing pages by service (ceramic, carbon, residential, commercial), generates leads at a fraction of the cost of a generic setup. See our [full Google Ads strategy](/blog/google-ads-for-window-tint-shops) for the exact keyword and negative-keyword lists we use.
+
+## 3. Build Review Velocity, Not Just Review Count
+
+A shop with 150 reviews and none in the last two months loses ground to a shop with 60 reviews and five new ones every week. Review velocity is a ranking factor and a trust factor — most customers check your rating before they call.
+
+Text every customer a direct review link within two hours of finishing their job, while the new tint is still fresh in their mind. Our [review generation guide](/blog/window-tint-shop-reviews) includes the exact script we give clients.
+
+## 4. Turn Every Customer Into a Referral Source
+
+Referrals are the highest-converting lead source most shops already have and most shops do nothing to systematize. A simple referral offer — a discount on their next detail, or a small cash incentive — turns happy customers into a recurring lead channel at close to zero cost.
+
+The mistake most shops make: they wait for referrals to happen organically instead of asking directly. Build the ask into your checkout process every time.
+
+## 5. Retarget the People Who Visited but Did Not Book
+
+Most visitors to your website or Google Business Profile do not call on the first visit. They are comparing 2–3 shops before deciding. Retargeting ads — showing your before/after work to people who already looked at your site — bring back a meaningful share of that lost traffic at a low cost per click, because you are re-engaging warm prospects, not cold ones.
+
+## 6. Respond in Minutes, Not Hours
+
+This one is not technically a "lead generation" tactic — it is a lead recovery tactic, and it matters just as much. Shops lose a huge share of the leads they already paid to generate simply because nobody responded fast enough. The first shop to respond to a new inquiry wins the job the majority of the time. We break this down fully in [why tint shops lose 67% of their leads](/blog/tint-shop-lead-follow-up).
+
+An automatic text-back within minutes, paired with a CRM that alerts your team immediately, recovers leads that would otherwise go cold. This is exactly what our [lead management system](/services/lead-management) is built to do.
+
+## 7. Let AI Capture the Leads You Would Otherwise Miss
+
+A large share of local searches happen outside business hours — evenings, weekends, while you are mid-install with your hands full of film. A 24/7 AI chatbot and voice agent answers pricing questions, captures contact details, and books appointments even when nobody on your team is available. See how it works in our [AI chatbot guide](/blog/ai-chatbot-for-window-tint-shops).
+
+## Putting It Together
+
+None of these seven tactics work in isolation as well as they work combined. Google Maps and Google Ads generate the leads. Reviews and referrals compound your visibility for free over time. Retargeting recovers people who almost booked. Speed-to-lead follow-up and AI capture make sure none of it goes to waste.
+
+That is the exact system we build for every [window tint marketing agency](/services) client — lead generation, lead management, and AI systems, working together instead of as three disconnected vendors.
+
+## The Bottom Line
+
+If your shop is only running one or two of these seven channels, you are leaving leads on the table every single week. Start with Google Maps and speed-to-lead — they are the cheapest to fix and the fastest to show results — then layer in the rest over the following 60–90 days.`,
+  },
+  {
+    slug: 'ppc-google-ads-management-window-tint-dealers',
+    title: 'PPC & Google Ads Management for Window Tint Dealers: What a Real Campaign Costs and Delivers',
+    excerpt: 'What PPC management for window tint dealers actually costs, what a properly managed campaign should deliver, and the questions to ask before you hire anyone.',
+    category: 'Google Ads',
+    author: 'Tint Marketing Pro Team',
+    date: '2026-07-15',
+    readTime: '9 min read',
+    keywords: ['ppc for tint shops', 'window tinting google ads management agency', 'window tint dealer google ads', 'google ads for window tint installers'],
+    metaDescription: 'What PPC and Google Ads management costs for window tint dealers, what a properly run campaign should deliver, and how to evaluate a management agency.',
+    content: `"PPC management" means something different depending on who you ask. For a window tint dealer, it should mean one specific thing: a Google Ads account built around tint-specific keywords, negative keywords, and landing pages, managed by someone who understands your customers — not a generalist running the same playbook for a plumber, a dentist, and a tint shop in the same week.
+
+Here is what real PPC management looks like for a tint dealer, what it should cost, and how to know if the agency running your account actually knows the industry.
+
+## What "Management" Should Actually Include
+
+A management fee should cover more than "we watch the dashboard." At minimum, ongoing PPC management for a tint dealer should include:
+
+- **Weekly search term review** — checking exactly what people typed before your ad showed, and adding new negative keywords as junk terms appear
+- **Bid and budget adjustments** based on which keywords and ad groups are actually producing booked jobs, not just clicks
+- **Ad copy testing** — running multiple headline and description variations to find what converts best for ceramic vs. general tint searches
+- **Landing page conversion tracking** tied to actual form submissions and phone calls, not just click volume
+- **Monthly reporting** that shows cost per lead by keyword, not a vague "impressions and clicks" summary
+
+If your current management does not include all five, you are paying for account access, not management.
+
+## What It Should Cost
+
+Google Ads management pricing for tint dealers generally falls into a few tiers:
+
+**Flat management fee:** Most specialized agencies charge a flat monthly fee separate from ad spend — commonly in the $300–$800/month range depending on account complexity and how many locations or service lines you run. This is separate from what you pay Google directly for clicks.
+
+**Percentage of spend:** Some agencies charge 10–20% of your monthly ad budget instead. This can work but creates a conflict of interest at higher spend levels — the agency has an incentive to recommend more spend, not necessarily better targeting.
+
+**Ad spend itself:** Separately, plan for $500–$2,500+/month in actual Google spend depending on your market size and competition. Smaller single-location shops can start productively at the lower end; multi-location dealers competing in larger metros need more.
+
+A properly managed tint-specific campaign should land in the $10–$18 cost-per-lead range in most markets. If you are paying $40, $60, or more per lead, the account is either targeting the wrong keywords, missing a negative keyword list, or sending traffic to a homepage instead of a dedicated landing page.
+
+## Why Dealer and Multi-Location Accounts Are Different
+
+If you operate as a dealer with multiple installers or locations, your account structure needs to reflect that — separate campaigns or ad groups per location, location-specific landing pages, and call tracking that tells you which location each lead actually belongs to. A single blended campaign across multiple locations makes it nearly impossible to tell which shop needs more marketing support and which is already at capacity.
+
+## Questions to Ask Before You Hire a PPC Manager
+
+1. Can you see a real (redacted) example of a tint-specific negative keyword list they use?
+2. Do they build a dedicated landing page per major service line, or send all clicks to your homepage?
+3. Do they provide call tracking with recorded calls, so lead quality can be audited — not just lead volume?
+4. Who owns the Google Ads account — you, or their agency's master account?
+5. What is the reporting cadence, and will it show cost per lead by keyword, not just spend and clicks?
+
+If the answer to any of these is vague, that is the account you should expect to be paying for clicks with limited insight into what those clicks are actually producing.
+
+## Full-Funnel vs. Ads-Only
+
+Google Ads alone generates clicks. What happens after the click determines whether those clicks become booked jobs. Full-funnel PPC management for a tint dealer pairs the ad campaign with a fast-response CRM and follow-up system — because a $12 lead that sits unanswered for six hours is worth less than a $20 lead that gets a callback in five minutes. See our breakdown of what [full-funnel advertising](/blog/what-results-should-tint-marketing-agency-deliver) should include beyond the ad account itself.
+
+## The Bottom Line
+
+PPC management for a window tint dealer is not a commodity service. The difference between a generalist agency and a tint-specific one usually shows up directly in your cost per lead — often by a factor of two or three. Before you sign with anyone, ask to see their negative keyword list and their landing page approach. If they cannot show you either, keep looking. Our own [Google Ads service for tint shops](/services/google-ads) is built around exactly this structure — happy to show you what it looks like on a free trial before you commit to anything.`,
+  },
+  {
+    slug: 'landing-page-conversion-rate-optimization-window-tint',
+    title: 'Landing Page & Conversion Rate Optimization for Window Tint Shop Websites',
+    excerpt: 'Why your tint shop website might be losing paid traffic before it ever converts, and the specific changes that move the needle on conversion rate.',
+    category: 'Business Tips',
+    author: 'Tint Marketing Pro Team',
+    date: '2026-07-18',
+    readTime: '8 min read',
+    keywords: ['landing page optimization for window tint businesses', 'window tint conversion rate optimization'],
+    metaDescription: 'How to optimize your window tint shop landing page for conversions — message match, load speed, mobile experience, trust signals, and form design.',
+    content: `You can run a perfect Google Ads campaign, rank in the Google Maps top 3, and still lose the majority of your traffic if the page people land on does not convert. Conversion rate optimization (CRO) is the most overlooked part of window tint marketing — most shops obsess over getting traffic and never measure what happens once it arrives.
+
+Here is what actually moves conversion rate for a tint shop landing page, in priority order.
+
+## 1. Message Match
+
+The single biggest conversion killer is a mismatch between what someone clicked and what they land on. If your Google Ad says "Ceramic Tint Starting at $399," the landing page headline should say almost exactly that — not a generic "Welcome to [Shop Name]." Every second of confusion about whether they landed in the right place costs you conversions.
+
+Build a dedicated landing page for each major service line — ceramic tint, carbon tint, residential film, commercial film — with a headline that mirrors the ad that sent the visitor there.
+
+## 2. Load Speed on Mobile
+
+The majority of tint shop searches happen on a phone. If your landing page takes more than 2–3 seconds to load on mobile, a meaningful share of visitors leave before the page even finishes rendering — before they ever see your offer. Compress images, eliminate unnecessary scripts, and test your actual load time on a phone, not just a desktop connection.
+
+## 3. One Clear Call-to-Action
+
+A landing page with a navigation menu, a blog link, an "About Us" section, and three different contact methods is not a landing page — it is a distraction machine. Paid traffic converts 3–5x better on a focused page with one headline, a short list of benefits, social proof, and one clear action: call now or fill out this form.
+
+Remove the main site navigation from paid landing pages entirely. Every link you leave on the page is an exit ramp away from converting.
+
+## 4. Trust Signals Above the Fold
+
+Tint customers are trusting you with a $50,000+ vehicle or their home's windows. Before they scroll, they should see: your rating and review count, a warranty mention, and ideally a before/after photo. These signals answer the unspoken question every visitor has — "can I trust this shop?" — before they even read your offer.
+
+## 5. Form Length
+
+Every extra field on your lead form reduces your conversion rate. Name, phone number, and vehicle or service type is enough to start a conversation — you do not need someone's email, preferred appointment time, and how they heard about you before you have even spoken to them. Ask the qualifying questions on the call, not the form.
+
+## 6. Pricing Transparency
+
+Shops that hide pricing entirely tend to see lower form-fill rates than shops that show at least a "starting at" figure. A visible starting price pre-qualifies the visitor before they even reach out, which means the leads who do convert are closer to being ready to book.
+
+## 7. Speed of Response After the Form Submits
+
+This is technically not a landing-page element, but it directly affects your measured conversion rate over time: if leads who fill out your form do not hear back for hours, some will simply book with the next shop that responds faster — and you will misdiagnose that as a "landing page problem" when it is actually a follow-up problem. Pair your CRO work with the speed-to-lead fixes in our [lead follow-up guide](/blog/tint-shop-lead-follow-up).
+
+## How to Actually Measure This
+
+You cannot optimize what you do not track. At minimum, set up:
+
+- Google Analytics 4 with a conversion event for form submissions and phone clicks
+- Call tracking so phone conversions are counted, not just form fills
+- A simple before/after comparison every time you change something on the page — do not change five things at once and guess which one worked
+
+## The Bottom Line
+
+Most window tint shops spend 90% of their marketing effort on generating traffic and 10% on what happens after someone lands on the page. Flip that ratio, even briefly. A landing page that converts 2% instead of 1% effectively doubles the value of every dollar you already spend on [Google Ads](/services/google-ads) or SEO — without spending an extra cent on traffic.`,
+  },
+  {
+    slug: 'email-sms-marketing-window-tint-film-businesses',
+    title: 'Email & SMS Marketing for Window Tint and Window Film Businesses',
+    excerpt: 'How to use email and SMS to bring back past customers, fill slow weeks, and turn one-time tint jobs into repeat business and referrals.',
+    category: 'Business Tips',
+    author: 'Tint Marketing Pro Team',
+    date: '2026-07-21',
+    readTime: '8 min read',
+    keywords: ['email marketing for window tint businesses', 'email and sms marketing for window tint and film businesses', 'tint social media'],
+    metaDescription: 'How window tint and window film businesses can use email and SMS marketing to drive repeat business, referrals, and off-season revenue.',
+    content: `Most window tint shops treat marketing as a one-way street: spend money to acquire a new customer, complete the job, and never speak to that customer again. That leaves an entire revenue channel untouched — the customers you already have.
+
+Email and SMS marketing are the lowest-cost way to stay in front of past customers, and for a tint or window film business specifically, there are natural, non-annoying reasons to reach back out that most shops never use.
+
+## Why This Matters More for Tint and Film Businesses Specifically
+
+Auto tint typically lasts 5–10+ years and residential or commercial film even longer, which means a single customer will not need the same service again for a while. That makes it tempting to treat every customer as a one-time transaction. But most customers who tinted their car also own other vehicles, know friends and family who need tint, and will eventually need a follow-up service — paint protection film, a second vehicle, a home or office film upgrade. Email and SMS are how you stay top-of-mind for all three, without paying for a new ad click each time.
+
+## What to Actually Send
+
+**1. The post-install follow-up (SMS, same day).** A quick text checking that everything looks great, paired with a direct link to leave a review. This is also your best moment to plant the referral ask.
+
+**2. The review request (SMS, within 2 hours).** Covered in more depth in our [review generation guide](/blog/window-tint-shop-reviews) — but it belongs in your automated sequence, not a manual task someone has to remember.
+
+**3. The referral reminder (email, 2–3 weeks later).** Once the excitement of new tint has settled in, a short email reminding them of your referral offer — a discount, a gift card, whatever fits your margins — converts better than asking on day one.
+
+**4. Seasonal re-engagement (email + SMS, 2–4x per year).** "Time to check your ceramic tint for a Tesla?" or "Summer heat is here — here's what ceramic tint blocks" campaigns to your full customer list keep your shop visible for both repeat business and referrals, even to customers who tinted years ago.
+
+**5. Multi-vehicle and household upsell (email, ongoing).** If someone tinted one car, a periodic reminder about their other vehicle, or a family member's car, captures revenue that would otherwise require a fresh ad click to acquire.
+
+**6. Slow-season campaigns (email + SMS).** Tint businesses see predictable seasonal dips. A past-customer email list is one of the cheapest ways to generate bookings during a slow month — see our [slow season survival guide](/blog/window-tint-shop-slow-season-guide) for the full seasonal playbook.
+
+## SMS vs. Email: When to Use Which
+
+SMS gets opened faster and works best for anything time-sensitive: post-install check-ins, review requests, appointment reminders, and limited-time promotions. Email works better for anything with more content: seasonal educational campaigns, referral program details, and multi-vehicle upsell messaging where a short text would not fit the message.
+
+Use both, but do not spam the same list on the same day with both channels — space them out so customers do not feel over-messaged.
+
+## Compliance Basics
+
+Always get explicit opt-in for SMS specifically (a checkbox at booking or in your intake form is enough) and include an easy opt-out in every message. This is not optional — TCPA compliance for SMS marketing carries real legal and financial risk if ignored, and it also just makes your messaging feel less intrusive to customers.
+
+## Automating This Without Adding Work
+
+Manually remembering to text every customer two hours after a job, then email them three weeks later, then check in again seasonally, is not realistic for a busy shop owner. This is exactly what belongs in a [CRM and automation system](/services/lead-management) — the sequences run automatically once they are built once, so review requests, referral asks, and re-engagement campaigns happen consistently without anyone having to remember.
+
+## The Bottom Line
+
+Your past customers are the cheapest lead source you have and the one most tint and window film shops ignore completely. A simple, automated email and SMS sequence — post-install text, review request, referral reminder, and periodic re-engagement — turns a database of one-time customers into an ongoing source of reviews, referrals, and repeat revenue.`,
+  },
+  {
+    slug: 'what-results-should-tint-marketing-agency-deliver',
+    title: 'What Results Should a Window Tint Marketing Agency Actually Deliver? (Real Reporting & Analytics Explained)',
+    excerpt: 'The specific metrics, reporting, and full-funnel coverage a window tint marketing agency should be able to show you — and the vague answers that are a red flag.',
+    category: 'Business Tips',
+    author: 'Tint Marketing Pro Team',
+    date: '2026-07-24',
+    readTime: '9 min read',
+    keywords: ['what results should a tint marketing agency deliver', 'marketing reporting for window tint businesses', 'window tint marketing analytics', 'full funnel advertising for window tint shops', 'marketing results for window tint shops'],
+    metaDescription: 'The specific results, reporting, and analytics a window tint marketing agency should deliver — cost per lead, call tracking, Maps ranking, and full-funnel coverage.',
+    content: `"We'll get you more leads" is not a result. It is a sentence that sounds like one. If you have ever ended a sales call with an agency and realized afterward that they never actually told you what you would be able to measure, you are not alone — it is one of the most common complaints we hear from tint shop owners who have worked with a generalist agency before.
+
+Here is what a window tint marketing agency should actually be able to show you, in numbers, on a recurring basis.
+
+## 1. Cost Per Lead, By Channel
+
+Not "we're running ads." A specific number: what did each lead cost from Google Ads, from Google Maps organic traffic, from social media, broken out separately. If an agency cannot separate this by channel, they cannot tell you which part of your budget is working and which part is not.
+
+## 2. Cost Per Lead, By Keyword
+
+One level deeper: within Google Ads specifically, which keywords are producing leads at $10 and which are producing leads at $60. Without this, you are trusting the agency's optimization decisions on faith instead of data.
+
+## 3. Call Recordings and Call Volume
+
+If your business runs on phone calls — and most tint shops do — your reporting needs to include actual call tracking: how many calls came in, from which source, and ideally recordings so you (or the agency) can audit whether those calls were real prospects or wrong numbers and spam. A report that only shows website clicks is missing the channel that likely drives most of your bookings.
+
+## 4. Google Maps Ranking Position, Tracked Over Time
+
+Not a one-time screenshot — an ongoing record of where you rank for your core local keywords, checked on a consistent schedule. Maps ranking moves gradually; you should be able to see the trend line, not just be told "it's improving."
+
+## 5. Appointments Booked and Revenue Attribution
+
+Leads are not the finish line — booked jobs are. A serious reporting setup connects a lead all the way through to whether it became an appointment and, ideally, tracks it against actual revenue. This is what a proper [CRM and lead management system](/services/lead-management) is built to do, and it is the difference between "we generated 40 leads" and "we generated 40 leads, 22 of which booked, worth roughly $X."
+
+## 6. Full-Funnel Coverage, Not Just Top-of-Funnel Ads
+
+"Full funnel" gets thrown around as a buzzword, but it has a specific, checkable meaning for a tint shop:
+
+- **Top of funnel:** Google Ads and Google Maps capturing people actively searching
+- **Middle of funnel:** retargeting ads bringing back people who visited but did not book
+- **Bottom of funnel:** CRM follow-up, missed-call text-back, and AI chat/voice converting the leads you already paid to generate
+
+Most agencies only run the top layer. If retargeting and follow-up are not part of what you are being billed for, you are only getting a fraction of what "full-funnel" should mean — and you are very likely losing a meaningful share of the leads you already paid for to slow or nonexistent follow-up.
+
+## What a Real Monthly Report Should Contain
+
+At minimum, expect: total leads by source, cost per lead by source and keyword, call volume with recordings available on request, current Google Maps ranking position for your core terms, and appointments booked. If your current report is a PDF with impressions and clicks and nothing tying back to actual phone calls or bookings, ask why.
+
+## The Vague Answers That Are a Red Flag
+
+- "We're seeing good engagement" — engagement is not a lead or a booked job.
+- "Rankings take time" without a specific tracked number — fine as a general truth, not fine as a substitute for showing you the actual trend.
+- "We don't have access to your call data" — then they cannot tell you if the leads they generated were any good.
+- A results guarantee with no specific metric or timeframe attached to it in writing.
+
+We cover the full list of questions to ask before signing with anyone in our [agency selection guide](/blog/choosing-a-window-tint-marketing-agency).
+
+## The Bottom Line
+
+A window tint marketing agency should be able to show you — in specific numbers, not adjectives — what a lead cost, where it came from, whether it turned into an appointment, and how your Google Maps ranking is trending over time. If your current reporting cannot answer those four questions, you are not getting marketing results. You are getting a monthly invoice and a vague sense that something is happening.`,
   },
 ]
 

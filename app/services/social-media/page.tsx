@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
-import { CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
+import { CheckCircle2, ArrowRight } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ServiceHeroImage from '@/components/ServiceHeroImage'
+import Reveal from '@/components/Reveal'
 import { ServiceSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
@@ -15,6 +17,8 @@ export const metadata: Metadata = {
     'window tint Meta Ads',
     'tint shop retargeting',
     'social media tint business',
+    'window film facebook ads',
+    'window tint social media agency',
   ],
   alternates: {
     canonical: 'https://tintmarketingpros.online/services/social-media',
@@ -59,13 +63,13 @@ export default function SocialMediaPage() {
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             Why Social Media Works for <span className="accent-gradient">Tint Shops</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: 'Visual Product', detail: 'Window tint transformations are inherently shareable. Before/after photos generate 3x more engagement than text posts for our clients.' },
+              { title: 'Visual Product', detail: 'Window tint and window film transformations are inherently shareable. Before/after photos generate 3x more engagement than text posts for our clients.' },
               { title: 'Local Targeting', detail: 'Meta Ads let us target homeowners and car enthusiasts within a 15-mile radius of your shop. No wasted impressions on people outside your service area.' },
               { title: 'Retargeting Power', detail: '97% of website visitors leave without booking. Retargeting ads follow them on Instagram and Facebook, keeping your shop top-of-mind until they are ready.' },
             ].map((item) => (
@@ -75,11 +79,11 @@ export default function SocialMediaPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             What We <span className="accent-gradient">Handle</span>
           </h2>
@@ -103,11 +107,27 @@ export default function SocialMediaPage() {
               </div>
             ))}
           </div>
+        </Reveal>
+      </section>
+
+      <section className="py-16 bg-surface border-t border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/blog/window-tint-facebook-ads-strategy" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">Facebook &amp; Instagram ads playbook</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link href="/blog/email-sms-marketing-window-tint-film-businesses" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">Email &amp; SMS marketing for tint &amp; film businesses</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-center mb-4">
             Get More <span className="accent-gradient">Eyes on Your Work</span>
           </h2>
@@ -115,7 +135,7 @@ export default function SocialMediaPage() {
           <div className="bg-white border border-slate-200 rounded-2xl p-8">
             <LeadForm />
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   )

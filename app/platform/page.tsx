@@ -3,7 +3,7 @@ import PlatformContent from '@/components/PlatformContent'
 
 export const metadata: Metadata = {
   title: 'CRM & Automation Platform for Tint Shops',
-  description: 'All-in-one CRM, AI chatbot, auto-booking, lead management, and reporting for window tint shops. Replace 12+ tools with one platform.',
+  description: 'All-in-one CRM, AI chatbot, auto-booking, and lead management for window tint shops — with full reporting and analytics on every lead and dollar spent. Replace 12+ tools with one platform.',
   keywords: [
     'tint shop CRM',
     'window tint business automation',
@@ -11,13 +11,15 @@ export const metadata: Metadata = {
     'window tint booking software',
     'tint shop reputation management',
     'tint business reporting dashboard',
+    'window tint marketing reporting',
+    'window tint marketing analytics',
   ],
   alternates: {
     canonical: 'https://tintmarketingpros.online/platform',
   },
   openGraph: {
     title: 'CRM & Automation Platform for Tint Shops',
-    description: 'All-in-one CRM, AI chatbot, auto-booking, lead management, and reporting built for window tint shops.',
+    description: 'All-in-one CRM, AI chatbot, auto-booking, lead management, and full reporting and analytics built for window tint shops.',
     url: 'https://tintmarketingpros.online/platform',
     type: 'website',
   },

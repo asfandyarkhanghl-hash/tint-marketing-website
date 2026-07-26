@@ -1,28 +1,33 @@
 import type { Metadata } from 'next'
-import { CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
+import { CheckCircle2, ArrowRight } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 import ROICalculator from '@/components/ROICalculator'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ServiceHeroImage from '@/components/ServiceHeroImage'
+import Reveal from '@/components/Reveal'
 import { ServiceSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Google Ads for Window Tint Shops',
-  description: 'Precision Google Ads campaigns for window tint shops. We target "ceramic tint near me" and convert clicks into booked jobs. $12 avg cost per lead.',
+  title: 'Google Ads Management for Window Tint Shops | PPC Agency',
+  description: 'Google Ads management and PPC for window tint shops and dealers. We target "ceramic tint near me" and convert clicks into booked jobs. $12 avg cost per lead.',
   keywords: [
     'window tint Google Ads',
+    'window tinting google ads management agency',
+    'ppc for tint shops',
     'tint shop PPC',
     'ceramic tint advertising',
     'window tint pay per click',
     'tint shop lead generation',
-    'Google Ads tint business',
+    'google ads for window tint installers',
+    'window tint dealer google ads',
   ],
   alternates: {
     canonical: 'https://tintmarketingpros.online/services/google-ads',
   },
   openGraph: {
-    title: 'Google Ads for Window Tint Shops',
-    description: 'Precision Google Ads campaigns for window tint shops. Average $12 cost per lead. Fill your schedule in 14 days.',
+    title: 'Google Ads Management for Window Tint Shops | PPC Agency',
+    description: 'Google Ads management and PPC for window tint shops. Average $12 cost per lead. Fill your schedule in 14 days.',
     url: 'https://tintmarketingpros.online/services/google-ads',
     type: 'website',
   },
@@ -77,7 +82,7 @@ export default function GoogleAdsPage() {
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             Why Generic Google Ads <span className="accent-gradient">Fail</span> for Tint Shops
           </h2>
@@ -90,11 +95,11 @@ export default function GoogleAdsPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             Our Tint-Specific <span className="accent-gradient">Keyword Strategy</span>
           </h2>
@@ -116,11 +121,11 @@ export default function GoogleAdsPage() {
               </tbody>
             </table>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
             Campaign Structure <span className="accent-gradient">Breakdown</span>
           </h2>
@@ -145,11 +150,11 @@ export default function GoogleAdsPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-center">
             ROI <span className="accent-gradient">Calculator</span>
           </h2>
@@ -157,11 +162,27 @@ export default function GoogleAdsPage() {
             See what Google Ads could do for your tint shop.
           </p>
           <ROICalculator />
+        </Reveal>
+      </section>
+
+      <section className="py-16 bg-surface border-t border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/blog/google-ads-for-window-tint-shops" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">The exact strategy we use to get $12 leads</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link href="/services/shop-ranking" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">Pair Google Ads with Google Maps ranking</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-center mb-4">
             Ready to Get <span className="accent-gradient">$12 Leads?</span>
           </h2>
@@ -171,7 +192,7 @@ export default function GoogleAdsPage() {
           <div className="bg-white border border-slate-200 rounded-2xl p-8">
             <LeadForm />
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   )

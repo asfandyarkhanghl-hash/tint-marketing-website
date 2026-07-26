@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Check, ArrowRight } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import Reveal from '@/components/Reveal'
 import { FAQPageSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
@@ -102,7 +103,7 @@ export default function PricingPage() {
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {tiers.map((tier) => (
               <div
@@ -146,16 +147,16 @@ export default function PricingPage() {
             ))}
           </div>
           <p className="text-center text-muted text-sm mt-10">
-            Curious what shop owners typically budget by size? Read our{' '}
+            Curious what window film and tint shop owners typically budget by size? Read our{' '}
             <Link href="/blog/window-tint-shop-marketing-cost" className="text-accent font-semibold hover:underline">
               realistic marketing budget guide
             </Link>.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-10 text-center">
             Pricing <span className="accent-gradient">Questions</span>
           </h2>
@@ -167,11 +168,27 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
+        </Reveal>
+      </section>
+
+      <section className="py-16 bg-surface border-t border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/blog/what-results-should-tint-marketing-agency-deliver" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">What results should you actually expect?</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link href="/blog/choosing-a-window-tint-marketing-agency" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">12 questions to ask before you sign</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-center mb-4">
             Try It Free for <span className="accent-gradient">14 Days</span>
           </h2>
@@ -179,7 +196,7 @@ export default function PricingPage() {
           <div className="bg-white border border-slate-200 rounded-2xl p-8">
             <LeadForm />
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   )

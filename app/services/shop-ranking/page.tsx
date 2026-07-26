@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import LeadForm from '@/components/LeadForm'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ServiceHeroImage from '@/components/ServiceHeroImage'
+import Reveal from '@/components/Reveal'
 import { ServiceSchema } from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
@@ -14,6 +17,8 @@ export const metadata: Metadata = {
     'map pack ranking tint shop',
     'local search tint business',
     'Google Maps optimization tint',
+    'window tint shop google maps ranking',
+    'window film shop local seo',
   ],
   alternates: {
     canonical: 'https://tintmarketingpros.online/services/shop-ranking',
@@ -33,7 +38,7 @@ const optimizationSteps = [
   { step: '04', title: 'Citation Building (52+ directories)', detail: 'Consistent NAP data across Yelp, BBB, Angi, auto directories, and local business listings.' },
   { step: '05', title: 'Weekly Google Posts', detail: 'We publish before/after photos, promotions, and educational content as Google Posts.' },
   { step: '06', title: 'Q&A Section Seeding', detail: 'We populate the Q&A section with common customer questions and keyword-rich answers.' },
-  { step: '07', title: 'Service & Product Listings', detail: 'Every tint product and service you offer gets its own listing with descriptions and pricing.' },
+  { step: '07', title: 'Service & Product Listings', detail: 'Every tint and window film product and service you offer gets its own listing with descriptions and pricing.' },
 ]
 
 const timeline = [
@@ -79,7 +84,7 @@ export default function ShopRankingPage() {
       </section>
 
       <section className="py-24 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Why Google Maps Is Your <span className="accent-gradient">Most Valuable Asset</span>
           </h2>
@@ -95,11 +100,11 @@ export default function ShopRankingPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             Our 7-Step <span className="accent-gradient">Optimization Process</span>
           </h2>
@@ -114,11 +119,11 @@ export default function ShopRankingPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-24 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
             What to Expect: <span className="accent-gradient">Week by Week</span>
           </h2>
@@ -130,11 +135,27 @@ export default function ShopRankingPage() {
               </div>
             ))}
           </div>
+        </Reveal>
+      </section>
+
+      <section className="py-16 bg-surface border-t border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/blog/window-tint-shop-google-maps-ranking" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">How to rank your shop in Google Maps</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link href="/blog/window-tint-shop-reviews" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+              <span className="text-sm font-semibold text-text">How to get more Google reviews</span>
+              <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="py-24 bg-primary">
-        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-bold text-center mb-4">
             Claim Your <span className="accent-gradient">Map Pack Spot</span>
           </h2>
@@ -142,7 +163,7 @@ export default function ShopRankingPage() {
           <div className="bg-surface border border-border rounded-2xl p-8">
             <LeadForm />
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   )

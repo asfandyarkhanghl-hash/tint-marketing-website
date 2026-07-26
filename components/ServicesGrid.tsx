@@ -6,6 +6,7 @@ import { Search, MapPin, TrendingUp, Share2, Bot, CalendarCheck, Filter, UserChe
 
 const pillars = [
   {
+    number: '01',
     label: 'Lead Generation',
     subtitle: 'Get found by buyers actively searching for tint services.',
     services: [
@@ -16,6 +17,7 @@ const pillars = [
     ],
   },
   {
+    number: '02',
     label: 'Lead Management',
     subtitle: 'Catch, track, and convert every lead — nothing falls through the cracks.',
     services: [
@@ -25,6 +27,7 @@ const pillars = [
     ],
   },
   {
+    number: '03',
     label: 'AI Systems',
     subtitle: 'Automate the follow-up and qualification work you cannot do 24/7.',
     services: [
@@ -50,9 +53,12 @@ export default function ServicesGrid() {
         <div className="space-y-16">
           {pillars.map((pillar, pIndex) => (
             <div key={pillar.label}>
-              <div className="mb-6">
-                <h3 className="font-display text-xl font-bold text-text">{pillar.label}</h3>
-                <p className="text-muted text-sm mt-1">{pillar.subtitle}</p>
+              <div className="mb-6 flex items-center gap-3">
+                <span className="font-display text-sm font-bold text-accent bg-accent/10 border border-accent/20 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">{pillar.number}</span>
+                <div>
+                  <h3 className="font-display text-xl font-bold text-text">{pillar.label}</h3>
+                  <p className="text-muted text-sm mt-1">{pillar.subtitle}</p>
+                </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {pillar.services.map((service, i) => (

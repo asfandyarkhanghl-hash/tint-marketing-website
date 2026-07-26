@@ -323,7 +323,7 @@ export default function ProfitCalculator() {
           <p className="text-muted text-sm mb-4">
             Not hitting these numbers yet? We guarantee 30–40 leads/month for tint shops.
           </p>
-          <Link href="/free-trial" className="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-xl hover:shadow-accent/20">
+          <Link href="/free-trial" className="btn-shine inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-xl hover:shadow-accent/25 hover:-translate-y-0.5">
             Get My 30+ Leads/Month <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>

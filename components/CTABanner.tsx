@@ -17,13 +17,13 @@ export default function CTABanner() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/free-trial"
-            className="bg-accent hover:bg-accent-dark text-white font-bold px-10 py-4 rounded-lg text-lg transition-all hover:shadow-xl hover:shadow-accent/25"
+            className="btn-shine bg-accent hover:bg-accent-dark text-white font-bold px-10 py-4 rounded-lg text-lg transition-all hover:shadow-xl hover:shadow-accent/25 hover:-translate-y-0.5"
           >
             Start Your Free Trial
           </Link>
           <Link
             href="/book"
-            className="border border-accent text-accent hover:bg-accent hover:text-white font-semibold px-10 py-4 rounded-lg text-lg transition-all"
+            className="border border-accent text-accent hover:bg-accent hover:text-white font-semibold px-10 py-4 rounded-lg text-lg transition-all hover:-translate-y-0.5"
           >
             Book a Strategy Call
           </Link>

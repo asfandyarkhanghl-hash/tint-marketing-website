@@ -5,7 +5,7 @@ interface CaseStudyCardProps { slug: string; shopName: string; city: string; pro
 
 export default function CaseStudyCard({ slug, shopName, city, problem, resultMetric, resultLabel }: CaseStudyCardProps) {
   return (
-    <div className="bg-white border border-slate-200 rounded-2xl p-8 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300 group">
+    <div className="card-hover bg-white border border-slate-200 rounded-2xl p-8 hover:border-accent/30 hover:shadow-xl hover:shadow-accent/10 transition-all duration-300 group">
       <div className="mb-6">
         <h3 className="font-display text-xl font-bold">{shopName}</h3>
         <p className="text-muted text-sm">{city}</p>

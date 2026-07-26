@@ -63,9 +63,9 @@ export default function ServicesGrid() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {pillar.services.map((service, i) => (
                   <motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: (pIndex * 3 + i) * 0.04, duration: 0.4 }}>
-                    <Link href={service.href} className="block bg-white border border-slate-200 rounded-2xl p-7 h-full group transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5">
+                    <Link href={service.href} className="card-hover block bg-white border border-slate-200 rounded-2xl p-7 h-full group transition-all duration-300 hover:border-accent/30 hover:shadow-xl hover:shadow-accent/10">
                       <div className="flex items-start justify-between mb-5">
-                        <div className="w-11 h-11 rounded-xl bg-accent/5 border border-accent/10 flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+                        <div className="icon-pop w-11 h-11 rounded-xl bg-accent/5 border border-accent/10 flex items-center justify-center group-hover:bg-accent/10 transition-colors">
                           <service.icon className="w-5 h-5 text-accent" />
                         </div>
                         <span className="text-[10px] text-accent font-semibold bg-accent/5 border border-accent/10 rounded-full px-2.5 py-1">{service.stat}</span>

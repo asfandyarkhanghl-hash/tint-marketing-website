@@ -36,9 +36,9 @@ function FeatureSection({
         <div className={`grid grid-cols-1 md:grid-cols-2 ${cols === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-5`}>
           {features.map((f, i) => (
             <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05, duration: 0.4 }}
-              className="glass-card rounded-2xl p-7 group transition-all duration-300 hover:translate-y-[-2px]"
+              className="card-hover glass-card rounded-2xl p-7 group transition-all duration-300"
             >
-              <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
+              <div className="icon-pop w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
                 <f.icon className="w-5 h-5 text-accent" />
               </div>
               <h3 className="font-display text-base font-bold text-text mb-2">{f.title}</h3>
@@ -158,9 +158,9 @@ export default function PlatformContent() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reputationFeatures.map((f, i) => (
               <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
-                className="glass-card rounded-2xl p-8 transition-all duration-300 hover:translate-y-[-2px]"
+                className="card-hover glass-card rounded-2xl p-8 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
+                <div className="icon-pop w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
                   <f.icon className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="font-display text-lg font-bold text-text mb-3">{f.title}</h3>

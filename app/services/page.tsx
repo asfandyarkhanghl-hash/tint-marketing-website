@@ -94,7 +94,7 @@ export default function ServicesPage() {
                 <Link
                   key={service.title}
                   href={service.href}
-                  className="group flex flex-col md:flex-row items-start gap-8 bg-white border border-slate-200 rounded-2xl p-8 md:p-12 hover:border-accent/30 hover:shadow-md transition-all"
+                  className="group card-hover flex flex-col md:flex-row items-start gap-8 bg-white border border-slate-200 rounded-2xl p-8 md:p-12 hover:border-accent/30 hover:shadow-md transition-all"
                 >
                   <div className="w-full md:w-64 flex-shrink-0">
                     <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
@@ -106,7 +106,7 @@ export default function ServicesPage() {
                         sizes="(min-width: 768px) 16rem, 100vw"
                         className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute left-4 top-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur flex items-center justify-center shadow-sm">
+                      <div className="icon-pop absolute left-4 top-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur flex items-center justify-center shadow-sm">
                         <service.icon className="w-5 h-5 text-accent" />
                       </div>
                     </div>

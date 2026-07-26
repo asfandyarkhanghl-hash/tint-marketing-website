@@ -73,7 +73,7 @@ export default function SocialMediaPage() {
               { title: 'Local Targeting', detail: 'Meta Ads let us target homeowners and car enthusiasts within a 15-mile radius of your shop. No wasted impressions on people outside your service area.' },
               { title: 'Retargeting Power', detail: '97% of website visitors leave without booking. Retargeting ads follow them on Instagram and Facebook, keeping your shop top-of-mind until they are ready.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white border border-slate-200 rounded-2xl p-8">
+              <div key={item.title} className="card-hover bg-white border border-slate-200 rounded-2xl p-8">
                 <h3 className="font-display text-xl font-bold text-text mb-3">{item.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{item.detail}</p>
               </div>
@@ -94,7 +94,7 @@ export default function SocialMediaPage() {
               { title: 'Community Management', items: ['Comment responses', 'DM handling and lead routing', 'Review sharing on social', 'Local community engagement'] },
               { title: 'Reporting & Analytics', items: ['Monthly performance reports', 'Cost per lead tracking', 'Audience growth metrics', 'Content performance analysis'] },
             ].map((category) => (
-              <div key={category.title} className="bg-surface border border-border rounded-2xl p-8">
+              <div key={category.title} className="card-hover bg-surface border border-border rounded-2xl p-8">
                 <h3 className="font-display text-lg font-bold text-accent mb-4">{category.title}</h3>
                 <ul className="space-y-3">
                   {category.items.map((item) => (
@@ -114,11 +114,11 @@ export default function SocialMediaPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Link href="/blog/window-tint-facebook-ads-strategy" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/window-tint-facebook-ads-strategy" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">Facebook &amp; Instagram ads playbook</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/blog/email-sms-marketing-window-tint-film-businesses" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/email-sms-marketing-window-tint-film-businesses" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">Email &amp; SMS marketing for tint &amp; film businesses</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>

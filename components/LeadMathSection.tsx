@@ -74,7 +74,7 @@ export default function LeadMathSection() {
           className="mt-10 text-center"
         >
           <p className="text-slate-400 text-sm mb-4">What would 30+ new customers a month do for your shop?</p>
-          <Link href="/free-trial" className="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-xl hover:shadow-accent/20">
+          <Link href="/free-trial" className="btn-shine inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-xl hover:shadow-accent/25 hover:-translate-y-0.5">
             Get My 30+ Leads/Month <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </motion.div>

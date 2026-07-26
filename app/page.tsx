@@ -11,7 +11,7 @@ import { OrganizationSchema, FAQSchema, LocalBusinessSchema } from '@/components
 import HeroSection from '@/components/HeroSection'
 import ServicesGrid from '@/components/ServicesGrid'
 import LeadMathSection from '@/components/LeadMathSection'
-import BeforeAfterGallery from '@/components/BeforeAfterGallery'
+import WaveDivider from '@/components/WaveDivider'
 
 const pillars = [
   { number: '01', icon: Target, title: 'Lead Generation', description: 'Google Ads, Google Maps ranking, SEO, and social media that put your shop in front of buyers actively searching for tint and window film services.', href: '/services' },
@@ -40,6 +40,7 @@ export default function HomePage() {
       <FAQSchema />
 
       <HeroSection />
+      <WaveDivider fromColor="#FFFFFF" toColor="#0B0F1A" />
       <ResultsCounter />
 
       {/* Problem Section */}
@@ -93,10 +94,10 @@ export default function HomePage() {
               <Link
                 key={pillar.title}
                 href={pillar.href}
-                className="group relative bg-surface border border-slate-200 rounded-2xl p-8 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
+                className="card-hover group relative bg-surface border border-slate-200 rounded-2xl p-8 hover:border-accent/30 hover:shadow-xl hover:shadow-accent/10 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
+                  <div className="icon-pop w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
                     <pillar.icon className="w-6 h-6 text-accent" />
                   </div>
                   <span className="font-display text-2xl font-bold text-accent/25">{pillar.number}</span>
@@ -167,8 +168,8 @@ export default function HomePage() {
           {/* Condensed feature highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {platformHighlights.map((f) => (
-              <div key={f.title} className="bg-white border border-slate-200 rounded-xl p-6 hover:border-accent/30 hover:shadow-md transition-all duration-300">
-                <div className="w-10 h-10 rounded-lg bg-accent/5 border border-accent/10 flex items-center justify-center mb-4">
+              <div key={f.title} className="card-hover bg-white border border-slate-200 rounded-xl p-6 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300">
+                <div className="icon-pop w-10 h-10 rounded-lg bg-accent/5 border border-accent/10 flex items-center justify-center mb-4">
                   <f.icon className="w-5 h-5 text-accent" />
                 </div>
                 <h3 className="font-bold text-sm mb-1.5">{f.title}</h3>
@@ -179,10 +180,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <BeforeAfterGallery />
-
       {/* Shop Interior Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -200,7 +199,7 @@ export default function HomePage() {
                   { before: 'High', after: 'Low', label: 'Cost Per Lead' },
                   { before: 'Slow', after: 'Fast', label: 'Booking Speed' },
                 ].map((stat) => (
-                  <div key={stat.label} className="bg-surface border border-slate-200 rounded-xl p-4 text-center">
+                  <div key={stat.label} className="bg-white border border-slate-200 rounded-xl p-4 text-center">
                     <div className="flex items-center justify-center gap-2 mb-1">
                       <span className="text-red line-through text-sm">{stat.before}</span>
                       <span className="text-accent font-display text-2xl font-bold">{stat.after}</span>
@@ -269,6 +268,7 @@ export default function HomePage() {
 
       <TestimonialCarousel />
       <FAQAccordion />
+      <WaveDivider fromColor="#F8FAFC" toColor="#0B0F1A" />
 
       {/* Final CTA */}
       <section className="py-24 section-dark relative overflow-hidden">

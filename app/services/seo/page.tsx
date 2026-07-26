@@ -116,7 +116,7 @@ export default function SEOPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pillars.map((pillar) => (
-              <div key={pillar.title} className="bg-surface border border-border rounded-2xl p-8">
+              <div key={pillar.title} className="card-hover bg-surface border border-border rounded-2xl p-8">
                 <h3 className="font-display text-xl font-bold text-text mb-4">{pillar.title}</h3>
                 <ul className="space-y-3">
                   {pillar.items.map((item) => (
@@ -139,7 +139,7 @@ export default function SEOPage() {
           </h2>
           <div className="space-y-4">
             {calendar.map((c) => (
-              <div key={c.month} className="bg-white border border-slate-200 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4">
+              <div key={c.month} className="card-hover bg-white border border-slate-200 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4">
                 <span className="text-accent font-bold text-sm uppercase tracking-wider w-24 flex-shrink-0">{c.month}</span>
                 <p className="text-muted text-sm">{c.content}</p>
               </div>
@@ -152,11 +152,11 @@ export default function SEOPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Link href="/blog/window-tint-keywords-seo" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/window-tint-keywords-seo" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">The 47 best keywords for tint shop SEO</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/services/shop-ranking" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/services/shop-ranking" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">Pair SEO with Google Maps ranking</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>

@@ -24,7 +24,7 @@ export default function TestimonialCarousel() {
       <div className="relative">
         <motion.div className="flex gap-6 w-max" animate={{ x: ['0%', '-50%'] }} transition={{ x: { repeat: Infinity, repeatType: 'loop', duration: 40, ease: 'linear' } }}>
           {doubled.map((t, i) => (
-            <div key={i} className="w-[380px] flex-shrink-0 bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div key={i} className="w-[380px] flex-shrink-0 bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-accent/30 hover:-translate-y-1">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
               </div>

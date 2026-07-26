@@ -64,11 +64,11 @@ export default function CaseStudiesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Link href="/blog/how-to-get-more-leads-window-tint-shop" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/how-to-get-more-leads-window-tint-shop" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">7 proven ways to get more tint shop leads</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/services" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/services" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">See the full system behind these results</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>

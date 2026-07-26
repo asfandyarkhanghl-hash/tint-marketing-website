@@ -44,14 +44,14 @@ export default function PlatformHero() {
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/free-trial"
-              className="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-xl hover:shadow-accent/25 glow-box"
+              className="btn-shine inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-xl hover:shadow-accent/25 hover:-translate-y-0.5 glow-box"
             >
               Start Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
               href="/book"
-              className="inline-flex items-center justify-center border border-border-light text-text hover:border-accent/40 hover:bg-accent/5 font-semibold px-8 py-4 rounded-xl text-lg transition-all"
+              className="inline-flex items-center justify-center border border-border-light text-text hover:border-accent/40 hover:bg-accent/5 hover:-translate-y-0.5 font-semibold px-8 py-4 rounded-xl text-lg transition-all"
             >
               See a Live Demo
             </Link>

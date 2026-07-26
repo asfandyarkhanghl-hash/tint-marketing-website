@@ -66,7 +66,7 @@ export default function LeadForm() {
       </div>
 
       <button type="submit" disabled={status === 'loading'}
-        className="w-full bg-accent hover:bg-accent-dark text-white font-bold py-4 px-6 rounded-lg text-base transition-all disabled:opacity-60 hover:shadow-lg hover:shadow-accent/25 flex items-center justify-center gap-2"
+        className="btn-shine w-full bg-accent hover:bg-accent-dark text-white font-bold py-4 px-6 rounded-lg text-base transition-all disabled:opacity-60 hover:shadow-lg hover:shadow-accent/25 flex items-center justify-center gap-2"
       >
         {status === 'loading' ? (<><Loader2 className="w-5 h-5 animate-spin" />Sending...</>) : 'Get My Free Trial — We Call You in 5 Minutes'}
       </button>

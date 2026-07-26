@@ -92,7 +92,7 @@ export default function LeadManagementPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {problems.map((f, i) => (
-              <div key={i} className="bg-white border border-slate-200 rounded-2xl p-8">
+              <div key={i} className="card-hover bg-white border border-slate-200 rounded-2xl p-8">
                 <span className="text-accent font-display text-5xl font-bold opacity-20">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="font-display text-xl font-bold text-text mt-4 mb-3">{f.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{f.detail}</p>
@@ -112,8 +112,8 @@ export default function LeadManagementPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {features.map((f) => (
-              <div key={f.title} className="glass-card rounded-2xl p-7">
-                <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
+              <div key={f.title} className="card-hover glass-card rounded-2xl p-7">
+                <div className="icon-pop w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
                   <f.icon className="w-5 h-5 text-accent" />
                 </div>
                 <h3 className="font-display text-lg font-bold mb-2">{f.title}</h3>
@@ -128,7 +128,7 @@ export default function LeadManagementPage() {
         <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((s) => (
-              <div key={s.label} className="text-center bg-white border border-slate-200 rounded-2xl p-8">
+              <div key={s.label} className="card-hover text-center bg-white border border-slate-200 rounded-2xl p-8">
                 <p className="font-display text-5xl font-bold text-accent">{s.stat}</p>
                 <p className="text-muted text-sm mt-2">{s.label}</p>
               </div>
@@ -146,11 +146,11 @@ export default function LeadManagementPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Link href="/blog/tint-shop-crm-automation-guide" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/tint-shop-crm-automation-guide" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">The complete CRM & automation guide</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/blog/tint-shop-lead-follow-up" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/tint-shop-lead-follow-up" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">Why shops lose 67% of leads (and the fix)</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>

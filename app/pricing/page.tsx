@@ -108,9 +108,9 @@ export default function PricingPage() {
             {tiers.map((tier) => (
               <div
                 key={tier.name}
-                className={`rounded-2xl p-8 flex flex-col ${
+                className={`card-hover rounded-2xl p-8 flex flex-col ${
                   tier.highlighted
-                    ? 'bg-primary border-2 border-accent shadow-xl shadow-accent/10 relative'
+                    ? 'bg-primary border-2 border-accent shadow-xl shadow-accent/10 relative hover:scale-[1.02]'
                     : 'bg-white border border-slate-200'
                 }`}
               >
@@ -135,9 +135,9 @@ export default function PricingPage() {
                 </ul>
                 <Link
                   href={tier.cta === 'Book a Strategy Call' ? '/book' : '/free-trial'}
-                  className={`inline-flex items-center justify-center gap-2 font-bold px-6 py-3 rounded-lg transition-all ${
+                  className={`inline-flex items-center justify-center gap-2 font-bold px-6 py-3 rounded-lg transition-all hover:-translate-y-0.5 ${
                     tier.highlighted
-                      ? 'bg-accent hover:bg-accent-dark text-white'
+                      ? 'btn-shine bg-accent hover:bg-accent-dark text-white'
                       : 'border border-accent text-accent hover:bg-accent hover:text-white'
                   }`}
                 >
@@ -162,7 +162,7 @@ export default function PricingPage() {
           </h2>
           <div className="space-y-4">
             {faqs.map((f) => (
-              <div key={f.q} className="bg-surface border border-border rounded-xl p-6">
+              <div key={f.q} className="card-hover bg-surface border border-border rounded-xl p-6">
                 <h3 className="font-bold text-text mb-2">{f.q}</h3>
                 <p className="text-muted text-sm leading-relaxed">{f.a}</p>
               </div>
@@ -175,11 +175,11 @@ export default function PricingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Link href="/blog/what-results-should-tint-marketing-agency-deliver" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/what-results-should-tint-marketing-agency-deliver" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">What results should you actually expect?</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/blog/choosing-a-window-tint-marketing-agency" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/choosing-a-window-tint-marketing-agency" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">12 questions to ask before you sign</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>

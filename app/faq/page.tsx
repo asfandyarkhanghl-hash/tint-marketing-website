@@ -103,7 +103,7 @@ export default function FAQPage() {
               <h2 className="font-display text-2xl md:text-3xl font-bold mb-8">{category.title}</h2>
               <div className="space-y-4">
                 {category.faqs.map((f) => (
-                  <div key={f.q} className="bg-white border border-slate-200 rounded-xl p-6">
+                  <div key={f.q} className="card-hover bg-white border border-slate-200 rounded-xl p-6 hover:border-accent/30 transition-all duration-300">
                     <h3 className="font-bold text-text mb-2">{f.q}</h3>
                     <p className="text-muted text-sm leading-relaxed">{f.a}</p>
                   </div>

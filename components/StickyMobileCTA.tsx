@@ -42,7 +42,7 @@ export default function StickyMobileCTA() {
             </Link>
             <Link
               href="/free-trial"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 bg-accent text-white font-bold text-sm px-4 py-3 rounded-xl transition-all active:scale-95"
+              className="btn-shine flex-1 inline-flex items-center justify-center gap-1.5 bg-accent text-white font-bold text-sm px-4 py-3 rounded-xl transition-all active:scale-95 shadow-lg shadow-accent/20"
             >
               Free Trial
               <ArrowRight className="w-4 h-4" />

@@ -20,7 +20,7 @@ export default function BlogListClient({ posts }: { posts: BlogPost[] }) {
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all hover:-translate-y-0.5 ${
               activeCategory === cat
                 ? 'bg-accent text-white'
                 : 'bg-white text-muted hover:text-text border border-slate-200'

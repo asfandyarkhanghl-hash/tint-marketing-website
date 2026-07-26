@@ -22,8 +22,8 @@ export default function ProcessSteps() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           <div className="hidden md:block absolute top-20 left-[16.6%] right-[16.6%] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
           {steps.map((step, i) => (
-            <motion.div key={step.number} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.5 }} className="relative text-center">
-              <div className="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mx-auto mb-6 relative">
+            <motion.div key={step.number} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.5 }} className="card-hover relative text-center">
+              <div className="icon-pop w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mx-auto mb-6 relative">
                 <step.icon className="w-7 h-7 text-accent-light" />
                 <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-red text-white text-xs font-bold flex items-center justify-center">{step.number}</span>
               </div>

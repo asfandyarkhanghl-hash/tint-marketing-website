@@ -94,7 +94,7 @@ export default function ShopRankingPage() {
               { stat: '4x', label: 'more calls for shops in the map pack' },
               { stat: '$0', label: 'cost per lead from organic Maps traffic' },
             ].map((item) => (
-              <div key={item.label} className="text-center bg-white border border-slate-200 rounded-2xl p-8">
+              <div key={item.label} className="card-hover text-center bg-white border border-slate-200 rounded-2xl p-8">
                 <p className="font-display text-5xl font-bold text-accent">{item.stat}</p>
                 <p className="text-muted text-sm mt-2">{item.label}</p>
               </div>
@@ -110,7 +110,7 @@ export default function ShopRankingPage() {
           </h2>
           <div className="space-y-6">
             {optimizationSteps.map((step) => (
-              <div key={step.step} className="flex items-start gap-6 bg-surface border border-border rounded-xl p-6">
+              <div key={step.step} className="card-hover flex items-start gap-6 bg-surface border border-border rounded-xl p-6">
                 <span className="font-display text-2xl font-bold text-accent/30 flex-shrink-0">{step.step}</span>
                 <div>
                   <h3 className="font-bold text-text mb-1">{step.title}</h3>
@@ -129,7 +129,7 @@ export default function ShopRankingPage() {
           </h2>
           <div className="space-y-4">
             {timeline.map((t) => (
-              <div key={t.week} className="flex flex-col md:flex-row md:items-center gap-4 bg-white border border-slate-200 rounded-xl p-6">
+              <div key={t.week} className="card-hover flex flex-col md:flex-row md:items-center gap-4 bg-white border border-slate-200 rounded-xl p-6">
                 <span className="text-accent font-bold text-sm uppercase tracking-wider w-28 flex-shrink-0">{t.week}</span>
                 <p className="text-muted text-sm">{t.description}</p>
               </div>
@@ -142,11 +142,11 @@ export default function ShopRankingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Link href="/blog/window-tint-shop-google-maps-ranking" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/window-tint-shop-google-maps-ranking" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">How to rank your shop in Google Maps</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/blog/window-tint-shop-reviews" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/window-tint-shop-reviews" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">How to get more Google reviews</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>

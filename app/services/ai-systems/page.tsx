@@ -93,7 +93,7 @@ export default function AiSystemsPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {problems.map((f, i) => (
-              <div key={i} className="bg-white border border-slate-200 rounded-2xl p-8">
+              <div key={i} className="card-hover bg-white border border-slate-200 rounded-2xl p-8">
                 <span className="text-accent font-display text-5xl font-bold opacity-20">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="font-display text-xl font-bold text-text mt-4 mb-3">{f.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{f.detail}</p>
@@ -113,8 +113,8 @@ export default function AiSystemsPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {features.map((f) => (
-              <div key={f.title} className="glass-card rounded-2xl p-7">
-                <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
+              <div key={f.title} className="card-hover glass-card rounded-2xl p-7">
+                <div className="icon-pop w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5">
                   <f.icon className="w-5 h-5 text-accent" />
                 </div>
                 <h3 className="font-display text-lg font-bold mb-2">{f.title}</h3>
@@ -132,7 +132,7 @@ export default function AiSystemsPage() {
           </h2>
           <div className="space-y-4">
             {faqs.map((f) => (
-              <div key={f.q} className="bg-white border border-slate-200 rounded-xl p-6">
+              <div key={f.q} className="card-hover bg-white border border-slate-200 rounded-xl p-6">
                 <h3 className="font-bold text-text mb-2">{f.q}</h3>
                 <p className="text-muted text-sm leading-relaxed">{f.a}</p>
               </div>
@@ -150,11 +150,11 @@ export default function AiSystemsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-accent text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Reading</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Link href="/blog/ai-chatbot-for-window-tint-shops" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/blog/ai-chatbot-for-window-tint-shops" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">How AI chatbots book jobs while you sleep</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/services/lead-management" className="group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
+            <Link href="/services/lead-management" className="card-hover group flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-6 py-4 hover:border-accent/30 hover:shadow-md transition-all">
               <span className="text-sm font-semibold text-text">See how AI plugs into your CRM</span>
               <ArrowRight className="w-4 h-4 text-accent flex-shrink-0 group-hover:translate-x-1 transition-transform" />
             </Link>

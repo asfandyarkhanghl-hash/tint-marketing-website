@@ -202,7 +202,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </p>
             <Link
               href="/free-trial"
-              className="inline-block bg-accent hover:bg-accent-dark text-white font-bold px-8 py-3 rounded-lg transition-all"
+              className="btn-shine inline-block bg-accent hover:bg-accent-dark text-white font-bold px-8 py-3 rounded-lg transition-all hover:-translate-y-0.5"
             >
               Start Free Trial
             </Link>
@@ -219,7 +219,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <Link
                 key={rp.slug}
                 href={`/blog/${rp.slug}`}
-                className="group bg-white border border-slate-200 rounded-xl p-6 hover:border-accent/30 transition-all"
+                className="group card-hover bg-white border border-slate-200 rounded-xl p-6 hover:border-accent/30 transition-all"
               >
                 <span className="text-accent text-xs font-semibold">{rp.category}</span>
                 <h3 className="font-bold text-text mt-2 mb-2 group-hover:text-accent transition-colors text-sm">

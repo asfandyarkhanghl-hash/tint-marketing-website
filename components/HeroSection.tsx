@@ -19,7 +19,16 @@ export default function HeroSection() {
         backgroundImage: 'radial-gradient(#1D4ED8 1px, transparent 1px)',
         backgroundSize: '40px 40px',
       }} />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/[0.05] rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 animate-float" />
+      <div className="absolute bottom-0 left-0 w-[420px] h-[420px] bg-red/[0.03] rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 animate-float" style={{ animationDelay: '2s' }} />
+      <svg
+        className="hidden lg:block absolute top-1/2 right-[6%] -translate-y-1/2 w-[560px] h-[560px] text-accent/[0.06] animate-spin-slow pointer-events-none"
+        viewBox="0 0 200 200"
+        fill="none"
+      >
+        <circle cx="100" cy="100" r="98" stroke="currentColor" strokeWidth="1" strokeDasharray="1 8" />
+        <circle cx="100" cy="100" r="78" stroke="currentColor" strokeWidth="1" strokeDasharray="6 10" />
+      </svg>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -40,7 +49,7 @@ export default function HeroSection() {
                 <br />
                 Tint Shop
                 <br />
-                <span className="accent-gradient">30–40 Leads</span>
+                <span className="accent-gradient-animated">30–40 Leads</span>
                 <br />
                 Every Month.
               </h1>
@@ -77,10 +86,10 @@ export default function HeroSection() {
               </motion.div>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Link href="/free-trial" className="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-xl hover:shadow-accent/20">
+                <Link href="/free-trial" className="btn-shine inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-xl hover:shadow-accent/25 hover:-translate-y-0.5">
                   Get My 30+ Leads/Month <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link href="/book" className="inline-flex items-center justify-center border-2 border-dark/10 text-text hover:border-accent hover:text-accent font-semibold px-8 py-4 rounded-xl text-lg transition-all">
+                <Link href="/book" className="inline-flex items-center justify-center border-2 border-dark/10 text-text hover:border-accent hover:text-accent hover:bg-accent/5 hover:-translate-y-0.5 font-semibold px-8 py-4 rounded-xl text-lg transition-all">
                   See If You Qualify
                 </Link>
               </div>

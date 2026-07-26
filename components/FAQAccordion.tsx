@@ -31,7 +31,7 @@ export default function FAQAccordion() {
         <p className="text-muted text-center mb-12">Everything you need to know before getting started.</p>
         <div className="space-y-3">
           {faqs.map((faq, i) => (
-            <div key={i} className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+            <div key={i} className="bg-white border border-slate-200 rounded-xl overflow-hidden hover:border-accent/20 transition-colors duration-300">
               <button onClick={() => setOpenIndex(openIndex === i ? null : i)} className="w-full flex items-center justify-between px-6 py-5 text-left">
                 <span className="font-semibold text-text pr-4">{faq.question}</span>
                 {openIndex === i ? <Minus className="w-5 h-5 text-accent flex-shrink-0" /> : <Plus className="w-5 h-5 text-muted flex-shrink-0" />}
